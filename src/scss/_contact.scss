@@ -1,6 +1,6 @@
 @use './_var';
 
-.header__menu {
+.header__contact {
     position: absolute;
     height: var.$sizes-cube;
     width: calc(var.$sizes-cube * 5.5);
@@ -10,25 +10,22 @@
     justify-content: space-around;
     &.is-opened {
         transition-duration: var.$duration-animation-button-header;
-        transform: translateX(- calc(var.$sizes-cube * 5.5));
-    }
-    @media screen and (min-width: 39rem) {
-        &.is-opened {
-            transition-duration: var.$duration-animation-button-header;
-            transform: translateX(- calc(var.$sizes-cube * 6.5));
+        transform: translateX(- calc(var.$sizes-cube * 6));
+        @media screen and (min-width: 50rem) {
+            width: calc(var.$sizes-cube * 8);
+            transform: translateX(- calc(var.$sizes-cube * 8));
+            &--cube:hover {
+                transition-duration: 0.5s;
+                scale: 1.2;
+            }
+        }
+        @media screen and (min-width: 75rem) {
+            transform: translateX(- calc(var.$sizes-cube * 10));
         }
     }
     &.is-closed {
         transition-duration: var.$duration-animation-button-header;
         transform: translateX(0);
-    }
-    @media screen and (min-width: 50rem) {
-        width: calc(var.$sizes-cube * 8);
-        transform: translateX(- calc((var.$sizes-cube * 1.5) * 6));
-        &--cube:hover {
-            transition-duration: 0.5s;
-            scale: 1.2;
-        }
     }
     &--cube {
         width: var.$sizes-cube;

@@ -108,15 +108,13 @@
             }
         }
     }
-    &__container {
+    &__burger {
         &.is-opened {
             transition-duration: var.$duration-animation-button-header;
-            transform: translateX(- calc(var.$sizes-cube * 5.5));
         }
         @media screen and (min-width: 39rem) {
             &.is-opened {
                 transition-duration: var.$duration-animation-button-header;
-                transform: translateX(- calc(var.$sizes-cube * 6.5));
             }
         }
         &.is-closed {

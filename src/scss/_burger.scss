@@ -1,6 +1,6 @@
 @use './var';
 
-.header__container__burger {
+.header__burger__button {
     cursor: pointer;
     position: relative;
     width: 1.8rem;
@@ -52,7 +52,7 @@
     &.is-opened {
         transform-origin: center;
         transition-duration: var.$duration-animation-button-header;
-        transform: rotate(-180deg) translateX(-0.5rem);
+        transform: translateX(- calc(var.$sizes-cube * 6)) rotate(540deg);
         span{
             transform-origin: center;
             transition-duration: var.$duration-animation-button-header;
