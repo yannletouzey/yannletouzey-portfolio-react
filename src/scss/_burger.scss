@@ -52,7 +52,7 @@
     &.is-opened {
         transform-origin: center;
         transition-duration: var.$duration-animation-button-header;
-        transform: translateX(- calc(var.$sizes-cube * 6)) rotate(540deg);
+        transform: translateX(- calc(var.$sizes-cube * 6)) rotate(180deg);
         span{
             transform-origin: center;
             transition-duration: var.$duration-animation-button-header;
@@ -60,13 +60,11 @@
             border-radius: 1px;
             &::before{
                 transform-origin: center;
-                transition-duration: var.$duration-animation-button-header;
                 transform: translateY(-5px) translateX(-7px) rotate(-45deg) scaleX(0.6);
                 border-radius: 1px;
             }
             &::after {
                 transform-origin: center;
-                transition-duration: var.$duration-animation-button-header;
                 transform: translateY(5px) translateX(-7px) rotate(45deg) scaleX(0.6);
                 border-radius: 1px;
             }

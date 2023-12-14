@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 
-const Burger = ({stateContactAppear, setStateContactAppear, menuRef}) => {
+const Burger = ({stateContactAppear, setStateContactAppear, stateFirstname, setStateFirstname, stateLastname, setStateLastname}) => {
     const [stateBurgerContainer, setStateBurgerContainer] = useState('is-closed');
     const [stateBurger, setStateBurger] = useState('is-closed');
     const [resize, setResize] = useState(window.innerWidth);
@@ -17,10 +17,13 @@ const Burger = ({stateContactAppear, setStateContactAppear, menuRef}) => {
             setStateContactAppear('is-opened');
             setStateBurger('is-closed');
             setStateBurgerContainer('is-closed');
+            setStateFirstname('firstnameShow');
+            setStateLastname('lastnameShow');
         } else {
             if (stateBurger === 'is-closed') {
                 setStateContactAppear('is-closed');
-                // menuRef.current.style.transform = `translateX(0)`;
+                setStateFirstname('firstnameShow');
+                setStateLastname('lastnameShow');
             }
         }
         return () => {
@@ -32,17 +35,11 @@ const Burger = ({stateContactAppear, setStateContactAppear, menuRef}) => {
         stateBurgerContainer === 'is-closed' ? setStateBurgerContainer('is-opened') : setStateBurgerContainer('is-closed');
         stateBurger === 'is-closed' ? setStateBurger('is-opened') : setStateBurger('is-closed');
         stateContactAppear === 'is-opened' ? setStateContactAppear('is-closed') : setStateContactAppear('is-opened');
+        stateLastname === 'lastnameShow' ? setStateLastname('lastnameHide') : setStateLastname('lastnameShow');
+        stateFirstname === 'firstnameShow' ? setStateFirstname('firstnameHide') : setStateFirstname('firstnameShow');
     }
 
     useEffect(() => {
-        const offset = menuRef.current.clientWidth;
-        if (stateBurger === 'is-opened') {
-            // burgerRef.current.style.transform = `translateX(-${offset + 20}px)`;
-            // menuRef.current.style.transform = `translateX(-${offset}px)`;
-        } else {
-            // burgerRef.current.style.transform = `translateX(0)`;
-            // menuRef.current.style.transform = `translateX(0)`;
-        }
     }, [stateBurger])
 
     return (

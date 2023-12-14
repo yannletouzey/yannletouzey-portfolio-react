@@ -7,16 +7,24 @@ import CubeContact from './CubeContact';
 
 const Header = () => {
     const [stateContactAppear, setStateContactAppear] = useState('is-closed');
-    const menuRef = useRef();
+    const [stateFirstname, setStateFirstname] = useState('firstnameShow');
+    const [stateLastname, setStateLastname] = useState('lastnameShow');
 
     return (
         <header className="header">
             <h2 id="header__title" className="header__title">
-                <span id="header__title--firstname" className="header__title--firstname">Yann</span>
-                <span id="header__title--lastname" className="header__title--lastname">Letouzey</span>
+                <span id="header__title--firstname" className={`header__title--firstname ${stateFirstname}`}>Yann</span>
+                <span id="header__title--lastname" className={`header__title--lastname ${stateLastname}`}>Letouzey</span>
             </h2>
-            <Burger stateContactAppear={stateContactAppear} setStateContactAppear={setStateContactAppear} menuRef={menuRef} />
-            <menu id="header__contact" className={`header__contact ${stateContactAppear}`} ref={menuRef}>
+            <Burger 
+                stateContactAppear={stateContactAppear} 
+                setStateContactAppear={setStateContactAppear} 
+                stateFirstname={stateFirstname}
+                setStateFirstname={setStateFirstname}
+                stateLastname={stateLastname}
+                setStateLastname={setStateLastname}
+            />
+            <menu id="header__contact" className={`header__contact ${stateContactAppear}`}>
                 <CubeContact 
                     id="cube-one" 
                     link="link" 
