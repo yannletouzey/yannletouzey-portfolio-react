@@ -1,10 +1,15 @@
 import { useState } from 'react'
+import Header from './Header'
+import Main from './Main'
+import ScreenStart from './ScreenStart'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+      <ScreenStart />
+      <Header />
+      <Main />
     </>
   )
 }
