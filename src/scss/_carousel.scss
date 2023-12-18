@@ -22,7 +22,7 @@
     position: relative;
     width: 100%;
     max-width: calc(var.$width * 2);
-    height: 35rem;
+    height: 30rem;
     perspective: 2000px;
     margin: 0 auto;
     display: flex;
@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: space-around;
     @media screen and (min-width: 38rem) {
+      height: 35rem;
         // height: var.$height;
         // max-width: calc(var.$width);
     }
@@ -107,7 +108,7 @@
         .hide{
             display: none;
         }
-        @media screen and (min-width: 33rem) {
+        @media screen and (min-width: 38rem) {
           &::after {
               content: "";
               position: absolute;
