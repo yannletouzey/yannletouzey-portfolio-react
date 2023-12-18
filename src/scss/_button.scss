@@ -9,10 +9,18 @@
         translate: 0 0;
         width: var.$width;
         &__prev {
-            translate: - calc(var.$width / 1.2) 0;
+            translate: - calc(var.$width * 0.6) 0;
         }
         &__next {
-            translate: calc(var.$width / 1.2) 0;
+            translate: calc(var.$width * 0.6) 0;
+        }
+    }
+    @media screen and (min-width: 50rem) {
+        &__prev {
+            translate: - calc(var.$width * 0.8) 0;
+        }
+        &__next {
+            translate: calc(var.$width * 0.8) 0;
         }
     }
     &__btn {
@@ -31,16 +39,18 @@
             left: -0%;
             top: -0%;
         }
-        &:hover #square-prev path, &:hover #square-next path {
-            stroke-dashoffset: var.$stroke-square;
-            transition-duration: 0.5s;
-        }
-        &:hover #arrow-prev path, &:hover #arrow-next path {
-            transition-duration: 0.5s;
-            stroke-dashoffset: 0;
-            transition-delay: 0.2s;
-            --pos-x: 10%;
-            transform: translateX(var(--pos-x));
+        @media screen and (min-width: 38rem) {
+            &:hover #square-prev path, &:hover #square-next path {
+                stroke-dashoffset: var.$stroke-square;
+                transition-duration: 0.5s;
+            }
+            &:hover #arrow-prev path, &:hover #arrow-next path {
+                transition-duration: 0.5s;
+                stroke-dashoffset: 0;
+                transition-delay: 0.2s;
+                --pos-x: 10%;
+                transform: translateX(var(--pos-x));
+            }
         }
     }
     &__prev {
@@ -49,11 +59,16 @@
     #arrow-prev path, #arrow-next path {
         position: absolute;
         z-index: -10;
-        stroke-dasharray: var.$stroke-arrow;
-        stroke-dashoffset: var.$stroke-arrow;
+        @media screen and (min-width: 38rem) {
+            stroke-dasharray: var.$stroke-arrow;
+            stroke-dashoffset: var.$stroke-arrow;
+        }
     }
     #square-prev path, #square-next path {
         stroke-dasharray: var.$stroke-square;
+        @media screen and (max-width: 38rem) {
+            stroke-dashoffset: var.$stroke-square;
+        }
     }
     #square-prev, #square-next {
         position: absolute;

@@ -5,9 +5,32 @@ import CarouselDescTechno from "./CarouselDescTechno.jsx";
 import CarouselDescLink from "./CarouselDescLink.jsx";
 
 const Carousel = ({currentValue, containerRef, degValue, degreesValue}) => {
+    const imgRef = useRef(null);
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseMove = (e) => {
+        const rect = imgRef.current.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+        imgRef.current.style.transformOrigin = `${x}% ${y}%`;
+        imgRef.current.style.transitionProperty = 'transform';
+        imgRef.current.style.transitionDuration = '0.5s';
+        imgRef.current.style.transform = `scale(1.5)`;
+    };
+    const handleMouseLeave = () => {
+        imgRef.current.style.transitionDuration = '0.5s';
+        setTimeout(() => {
+            imgRef.current.style.transformOrigin = `center center`;
+        }, 500);
+        imgRef.current.style.transform = `scale(1)`;
+    };
+
+    const boxImgRef = useRef();
     const faceRef = dataCarousel.map(() => useRef());
     useEffect(() => {
         containerRef.current.style.transform = `rotateY(${degreesValue}deg)`;
+        // Animation carousel
         dataCarousel.forEach((f, index) => {
             if (dataCarousel[index].id == currentValue) {
                 faceRef.forEach((faceElement, indexFace) => {
@@ -27,6 +50,10 @@ const Carousel = ({currentValue, containerRef, degValue, degreesValue}) => {
                 })
             }
         })
+
+        // Animation image
+
+
     }, [degreesValue])
 
     useEffect(() => {
@@ -38,30 +65,21 @@ const Carousel = ({currentValue, containerRef, degValue, degreesValue}) => {
     return (
         <div id="container__carousel" className="container__carousel" ref={containerRef}>
             {dataCarousel.map((dataCarouselElement, index) => {
-                return React.createElement('div', {
-                        className: 'container__carousel--face',
-                        key: index,
-                        id: `${dataCarouselElement.id}`,
-                        ref: faceRef[index]
-                    }, React.createElement('div', {
-                            className: 'container__carousel--img',
-                            key: `container__carousel--img-${dataCarouselElement.id}`
-                        }, React.createElement('img', {
-                            src: dataCarouselElement.imgUrl,
-                            alt: dataCarouselElement.alt
-                        }
-                    )), React.createElement('div', {
-                            className: 'container__carousel--desc',
-                            key: `container__carousel--desc-${dataCarouselElement.id}`
-                        }, 
-                        <CarouselDescLink 
-                            dataCarouselElement={dataCarouselElement} 
-                        />, 
-                        <CarouselDescTechno 
-                            key={dataCarouselElement.id} 
-                            src={dataCarouselElement.techno} 
-                        />
-                    )
+                return (
+                    <div className="container__carousel--face" key={index} id={`${dataCarouselElement.id}`} ref={faceRef[index]}>
+                        <div className="container__carousel--img" key={`container__carousel--img-${dataCarouselElement.id}`}>
+                            <img ref={imgRef} src={dataCarouselElement.imgUrl} alt={dataCarouselElement.alt} />
+                        </div>
+                        <div className="container__carousel--desc" key={`container__carousel--desc-${dataCarouselElement.id}`}>
+                            <CarouselDescLink 
+                                dataCarouselElement={dataCarouselElement} 
+                            />
+                            <CarouselDescTechno 
+                                key={dataCarouselElement.id} 
+                                src={dataCarouselElement.techno} 
+                            />
+                        </div>
+                    </div>
                 )
             })}
         </div>
