@@ -31,8 +31,6 @@
     justify-content: space-around;
     @media screen and (min-width: 38rem) {
       height: 35rem;
-        // height: var.$height;
-        // max-width: calc(var.$width);
     }
     &__carousel {
         transform-style: preserve-3d;
@@ -41,6 +39,14 @@
         max-width: var.$width;
         transition-duration: 0.5s;
         transition-timing-function: cubic-bezier(.31,1.78,.65,.89);
+
+        // Height screen
+        @media screen and (min-height: 43rem) {
+            margin: 1rem auto;
+        }
+        @media screen and (min-height: 50rem) {
+            margin: 4rem auto;
+        }
         &--img {
           position: relative;
           width: 100%;
@@ -108,7 +114,7 @@
         .hide{
             display: none;
         }
-        @media screen and (min-width: 38rem) {
+        @media screen and (min-width: 38rem) and (min-height: 50rem) {
           &::after {
               content: "";
               position: absolute;

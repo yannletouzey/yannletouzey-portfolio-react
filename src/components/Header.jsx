@@ -4,6 +4,7 @@ import githubLogo from '../assets/img/logos/github.png';
 import twitterLogo from '../assets/img/logos/logo-x.png';
 import Burger from './Burger';
 import CubeContact from './CubeContact';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [stateContactAppear, setStateContactAppear] = useState('is-closed');
@@ -12,10 +13,10 @@ const Header = () => {
 
     return (
         <header className="header">
-            <h2 id="header__title" className="header__title">
+            <Link to="/" id="header__title" className="header__title">
                 <span id="header__title--firstname" className={`header__title--firstname ${stateFirstname}`}>Yann</span>
                 <span id="header__title--lastname" className={`header__title--lastname ${stateLastname}`}>Letouzey</span>
-            </h2>
+            </Link>
             <Burger 
                 stateContactAppear={stateContactAppear} 
                 setStateContactAppear={setStateContactAppear} 

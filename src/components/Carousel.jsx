@@ -1,8 +1,6 @@
 import React, {useState, useEffect, useRef } from "react";
 import dataCarousel from "../assets/data/dataCarousel.js";
-import technoImg from "../assets/data/dataTechno.js";
-import CarouselDescTechno from "./CarouselDescTechno.jsx";
-import CarouselDescLink from "./CarouselDescLink.jsx";
+import CarouselDesc from "./CarouselDesc.jsx";
 
 const Carousel = ({currentValue, containerRef, degValue, degreesValue}) => {
     const imgRef = useRef(null);
@@ -30,7 +28,6 @@ const Carousel = ({currentValue, containerRef, degValue, degreesValue}) => {
     const faceRef = dataCarousel.map(() => useRef());
     useEffect(() => {
         containerRef.current.style.transform = `rotateY(${degreesValue}deg)`;
-        // Animation carousel
         dataCarousel.forEach((f, index) => {
             if (dataCarousel[index].id == currentValue) {
                 faceRef.forEach((faceElement, indexFace) => {
@@ -50,10 +47,6 @@ const Carousel = ({currentValue, containerRef, degValue, degreesValue}) => {
                 })
             }
         })
-
-        // Animation image
-
-
     }, [degreesValue])
 
     useEffect(() => {
@@ -70,15 +63,7 @@ const Carousel = ({currentValue, containerRef, degValue, degreesValue}) => {
                         <div className="container__carousel--img" key={`container__carousel--img-${dataCarouselElement.id}`}>
                             <img ref={imgRef} src={dataCarouselElement.imgUrl} alt={dataCarouselElement.alt} />
                         </div>
-                        <div className="container__carousel--desc" key={`container__carousel--desc-${dataCarouselElement.id}`}>
-                            <CarouselDescLink 
-                                dataCarouselElement={dataCarouselElement} 
-                            />
-                            <CarouselDescTechno 
-                                key={dataCarouselElement.id} 
-                                src={dataCarouselElement.techno} 
-                            />
-                        </div>
+                        <CarouselDesc dataCarouselElement={dataCarouselElement} />
                     </div>
                 )
             })}

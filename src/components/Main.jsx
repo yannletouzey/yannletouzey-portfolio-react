@@ -11,8 +11,6 @@ const Main = () => {
     const degValue = 90;
     const [degreesValue, setDegreesValue] = useState(0);
     const [currentValue, setCurrentValue] = useState(1);
-    const allFacesRef = useRef();
-    
     const handleClick = (e) => {
         if (e.target.id === "next") {
             if (currentValue < dataCarousel.length) {
