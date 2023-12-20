@@ -33,6 +33,7 @@
       height: 35rem;
     }
     &__carousel {
+      position: relative;
         transform-style: preserve-3d;
         width: 100%;
         aspect-ratio: 1/1;
@@ -74,12 +75,12 @@
             font-family: 'SpaceMono-Italic';
             position: relative;
             list-style-type: none;
-            a, p {
+            a, p:not(.container__carousel--msgNotOnline) {
               color: var.$color-desc;
               text-align: center;
               font-size: 1.3rem;
             }
-            p {
+            p:not(.container__carousel--msgNotOnline)  {
               text-decoration: line-through;
             }
             .s1 span {
@@ -116,6 +117,28 @@
         }
         .hide{
             display: none;
+        }
+        &--msgNotOnline {
+          transform-origin: center;
+          position: absolute;
+          top: -5rem;
+          left: 50%;
+          font-size: 0.8rem;
+          width: 100%;
+          background-color: var.$background-color-carousel;
+          color: var.$color;
+          padding: 1rem;
+          border-radius: 1rem;
+          box-shadow: 0px 0px 7px 7px rgba(131,125,125,1), inset 0px 0px 7px 2px rgba(131,125,125,1);
+          animation: appear 0.5s cubic-bezier(.17,2,.55,.67) forwards;
+          @keyframes appear {
+              0% {
+                  transform: translate(-50%, -50%) scale(0);
+              }
+              100% {
+                  transform: translate(-50%, -50%) scale(1);
+              }
+          }
         }
         @media screen and (min-width: 38rem) and (min-height: 50rem) {
           &::after {

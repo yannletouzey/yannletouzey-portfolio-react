@@ -4,7 +4,7 @@ import Main from './Main'
 import ScreenStart from './ScreenStart'
 import EasyMailing from './EasyMailing';
 import EasyTimeClock from './EasyTimeClock';
-import dataCarousel from '../assets/data/dataCarousel';
+import dataCarousel from '../assets/data/dataCarousel.js';
 
 function App() {
   return (
