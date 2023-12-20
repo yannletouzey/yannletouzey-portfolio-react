@@ -74,10 +74,13 @@
             font-family: 'SpaceMono-Italic';
             position: relative;
             list-style-type: none;
-            a {
+            a, p {
               color: var.$color-desc;
               text-align: center;
               font-size: 1.3rem;
+            }
+            p {
+              text-decoration: line-through;
             }
             .s1 span {
               transform-origin: bottom;

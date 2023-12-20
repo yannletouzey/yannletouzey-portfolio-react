@@ -116,7 +116,7 @@ const dataCarousel = [
             mysql: new URL('../../assets/icons/mysql.svg', import.meta.url)
         },
         stack: "back-end",
-        inline: true,
+        inline: false,
         desc: "Pas encore de description",
         seriousProject: true
     },
@@ -197,7 +197,7 @@ const dataCarousel = [
             react: new URL('../../assets/icons/react.svg', import.meta.url),
         },
         stack: "front-end",
-        inline: true,
+        inline: false,
         desc: "Petit project réalisé pendant la formation Oclock pour mettre en pratique les notions de REACT du jour.",
         seriousProject: true
     }
