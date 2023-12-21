@@ -28,19 +28,19 @@ const Header = () => {
             <menu id="header__contact" className={`header__contact ${stateContactAppear}`}>
                 <CubeContact 
                     id="cube-one" 
-                    link="link" 
+                    link="https://www.linkedin.com/in/yann-letouzey-84374524b/" 
                     logo={linkedInLogo} 
                     alt="Logo LinkedIn"
                 />
                 <CubeContact 
                     id="cube-two" 
-                    link="link" 
+                    link="https://github.com/yannletouzey" 
                     logo={githubLogo} 
                     alt="Logo GutHub"
                 />
                 <CubeContact 
                     id="cube-three" 
-                    link="link" 
+                    link="https://twitter.com/home" 
                     logo={twitterLogo} 
                     alt="Logo Twitter"
                 />

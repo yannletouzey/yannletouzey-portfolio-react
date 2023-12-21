@@ -189,7 +189,7 @@ const dataCarousel = [
         imgUrl: new URL("../../assets/img/screenshot-website/trouve-ta-ville.png", import.meta.url),
         alt: "Image de la page d'accueil de trouve-ta-ville",
         title: "trouve-ta-ville",
-        link: "https://trouve-ta-ville.yann-letouzey.com/",
+        link: "https://trouve-ta-ville-blond.vercel.app/",
         page: "/trouve-ta-ville",
         techno: {
             css: new URL('../../assets/icons/css.svg', import.meta.url),
@@ -197,7 +197,7 @@ const dataCarousel = [
             react: new URL('../../assets/icons/react.svg', import.meta.url),
         },
         stack: "front-end",
-        inline: false,
+        inline: true,
         desc: "Petit project réalisé pendant la formation Oclock pour mettre en pratique les notions de REACT du jour.",
         seriousProject: true
     }

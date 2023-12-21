@@ -1,17 +1,31 @@
 @use './_var';
 .container__carousel--desc--more {
     position: relative;
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     margin: 1rem;
-    transition-duration: 0.5s;
-    &:hover {
+    &:hover::before, &:hover::after {
+        scale: 1.5;
         rotate: 45deg;
         cursor: pointer;
     }
+    &--msg {
+        position: absolute;
+        top: -2rem;
+        left: 1rem;
+        background-color: #fff;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        text-wrap: nowrap;
+        scale: 0;
+        transition-duration: 0.5s;
+        transform-origin: 0 100%;
+    }
     &::before, &::after {
         content: "";
+        transition-duration: 0.5s;
         position: absolute;
         background-color: var.$color;
         --size-one: 0.2rem;
@@ -29,4 +43,13 @@
         width: var(--size-one);
         height: var(--size-two);
     }
+
+    
+}
+.hover {
+    display: none;
+}
+.container__carousel--desc--more:hover .container__carousel--desc--more--msg {
+    scale: 1;
+    translate: 1rem 0rem;
 }
