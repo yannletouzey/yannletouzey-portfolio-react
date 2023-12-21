@@ -4,6 +4,8 @@
     display: flex;
     justify-content: space-around;
     width: var.$width;
+    position: relative;
+    z-index: -10;
     @media screen and (min-width: 38rem) {
         position: absolute;
         translate: 0 0;

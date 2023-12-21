@@ -78,7 +78,8 @@
             a, p:not(.container__carousel--msgNotOnline) {
               color: var.$color-desc;
               text-align: center;
-              font-size: 1.3rem;
+              font-size: 1.2rem;
+              cursor: pointer;
             }
             p:not(.container__carousel--msgNotOnline)  {
               text-decoration: line-through;

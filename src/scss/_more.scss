@@ -1,4 +1,5 @@
 @use './_var';
+
 .container__carousel--desc--more {
     position: relative;
     width: 1rem;
@@ -14,14 +15,16 @@
         position: absolute;
         top: -2rem;
         left: 1rem;
-        background-color: #fff;
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
         border-radius: 0.5rem;
         text-align: center;
         text-wrap: nowrap;
         scale: 0;
-        transition-duration: 0.5s;
+        transition-duration: 0.4s;
         transform-origin: 0 100%;
+        color: var.$color;
+        background-color: var.$background-color-carousel;
+        box-shadow: 0px 0px 7px 7px rgba(131,125,125,1), inset 0px 0px 7px 2px rgba(131,125,125,1);
     }
     &::before, &::after {
         content: "";
@@ -43,8 +46,6 @@
         width: var(--size-one);
         height: var(--size-two);
     }
-
-    
 }
 .hover {
     display: none;
@@ -52,4 +53,5 @@
 .container__carousel--desc--more:hover .container__carousel--desc--more--msg {
     scale: 1;
     translate: 1rem 0rem;
+    transition-timing-function: cubic-bezier(.31,1.78,.65,.89);
 }
