@@ -7,38 +7,38 @@ const CarouselDescLink = ({dataCarouselElement}) => {
     const tooltip = useRef();
     useEffect(() => {
         setInline(dataCarouselElement.inline);
+        if (inline) {
+            const text = linkRef.current.children[0].children[0].textContent;
+            linkRef.current.children[0].children[0].innerHTML = '';
+
+            const text2 = linkRef.current.children[1].children[0].textContent;
+            linkRef.current.children[1].children[0].innerHTML = '';
+            const textArray = Array.from(text);
+            const textArray2 = Array.from(text2);
+            textArray.forEach((e, i) => {
+                const span = document.createElement('span');
+                span.style.display = "inline-block";
+                span.style.transition = "0.5s";
+                span.style.transitionDelay = `${0.03 * i}s`
+                span.id = i;
+                span.textContent = e;
+                linkRef.current.children[0].children[0].appendChild(span);
+            });
+            textArray2.forEach((e, i) => {
+                const span = document.createElement('span');
+                span.style.display = "inline-block";
+                span.style.transition = "0.5s";
+                span.style.transitionDelay = `${0.03 * i}s`
+                span.id = i;
+                span.textContent = e;
+                linkRef.current.children[1].children[0].appendChild(span);
+            });
+        }
     }, [inline]);
     useEffect(() => {
         hover ? tooltip.current.style.display = "inline" : tooltip.current.style.display = "none";
     }, [hover])
     useEffect(() => {
-        // if (inline && link) {
-        //     const text = linkRef.current.children[0].children[0].textContent;
-        //     linkRef.current.children[0].children[0].innerHTML = '';
-
-        //     const text2 = linkRef.current.children[1].children[0].textContent;
-        //     linkRef.current.children[1].children[0].innerHTML = '';
-        //     const textArray = Array.from(text);
-        //     const textArray2 = Array.from(text2);
-        //     textArray.forEach((e, i) => {
-        //         const span = document.createElement('span');
-        //         span.style.display = "inline-block";
-        //         span.style.transition = "0.5s";
-        //         span.style.transitionDelay = `${0.03 * i}s`
-        //         span.id = i;
-        //         span.textContent = e;
-        //         linkRef.current.children[0].children[0].appendChild(span);
-        //     });
-        //     textArray2.forEach((e, i) => {
-        //         const span = document.createElement('span');
-        //         span.style.display = "inline-block";
-        //         span.style.transition = "0.5s";
-        //         span.style.transitionDelay = `${0.03 * i}s`
-        //         span.id = i;
-        //         span.textContent = e;
-        //         linkRef.current.children[1].children[0].appendChild(span);
-        //     });
-        // }
     }, [link])
     return (
         <div className="container__carousel--desc--link">
