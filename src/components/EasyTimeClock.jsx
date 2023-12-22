@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import dataEasyTimeClock from "../assets/data/dataEasyTimeClock.js";
+import Footer from "./Footer.jsx";
 const EasyTimeClock = ( { descSmall, setTitleCurrent } ) => {
     const desc = descSmall.filter((d) => d.page === "/easy-time-clock");
     const cardRef = dataEasyTimeClock.map(() => useRef());
@@ -73,22 +74,25 @@ const EasyTimeClock = ( { descSmall, setTitleCurrent } ) => {
         })
     }, [])
     return (
-        <main className="main">
-            <div className="main__description">
-                {desc.map(d => d.descSmall)}
-                {/* <button className="main__description--button" onClick={handleDescription}></button> */}
-            </div>
-            <div className="main__container">
-                {dataEasyTimeClock.map((data, index) => (
-                    <div className="main__container--card card" key={`container__container--card-${index}`} ref={cardRef[index]}>
-                        <div className="main__container--card--containerImg">
-                            <img src={data.img} alt={data.alt} />
+        <>
+            <main className="main">
+                <div className="main__description">
+                    {desc.map(d => d.descSmall)}
+                    {/* <button className="main__description--button" onClick={handleDescription}></button> */}
+                </div>
+                <div className="main__container">
+                    {dataEasyTimeClock.map((data, index) => (
+                        <div className="main__container--card card" key={`container__container--card-${index}`} ref={cardRef[index]}>
+                            <div className="main__container--card--containerImg">
+                                <img src={data.img} alt={data.alt} />
+                            </div>
+                            <div className="main__container--card--containerDesc">{data.desc}</div>
                         </div>
-                        <div className="main__container--card--containerDesc">{data.desc}</div>
-                    </div>
-                ))}
-            </div>
-        </main>
+                    ))}
+                </div>
+            </main>
+            <Footer />
+        </>
     )
 }
 export default EasyTimeClock;

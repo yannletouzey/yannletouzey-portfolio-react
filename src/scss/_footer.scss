@@ -1,0 +1,15 @@
+@use './_var';
+
+.footer {
+    margin-top: auto;
+    height: 4rem;
+    width: 100%;
+    background-color: var.$background-color;
+    color: var.$color;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    a {
+        color: var.$color;
+    }
+}

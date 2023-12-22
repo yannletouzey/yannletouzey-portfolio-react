@@ -3,6 +3,7 @@ import Buttons from "./Buttons";
 import Carousel from "./Carousel";
 import Description from "./Description";
 import dataCarousel from "../assets/data/dataCarousel";
+import Footer from "./Footer";
 
     
 const Main = ({ setTitleCurrent }) => {
@@ -30,13 +31,16 @@ const Main = ({ setTitleCurrent }) => {
         }
     }
     return (
-        <main className="main">
-            <Description />
-            <section id="container" className="container">
-                <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} />
-                <Buttons nextRef={nextRef} prevRef={prevRef} handleClick={handleClick}/>
-            </section>
-        </main>
+        <>
+            <main className="main">
+                <Description />
+                <section id="container" className="container">
+                    <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} />
+                    <Buttons nextRef={nextRef} prevRef={prevRef} handleClick={handleClick}/>
+                </section>
+            </main>
+            <Footer />
+        </>
     )
 }
 export default Main;
