@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import dataEasyTimeClock from "../assets/data/dataEasyTimeClock.js";
-const EasyTimeClock = ( { descSmall } ) => {
+const EasyTimeClock = ( { descSmall, setTitleCurrent } ) => {
     const desc = descSmall.filter((d) => d.page === "/easy-time-clock");
     const cardRef = dataEasyTimeClock.map(() => useRef());
     useEffect(() => {
-
+        setTitleCurrent("Yann Letouzey - Projet Easy Time Clock");
         let sizeScreen = window.innerWidth;
         let heightScreen = window.innerHeight;
         let topTriggerScreen = heightScreen - (heightScreen / 3) * 2;

@@ -4,7 +4,11 @@ import Carousel from "./Carousel";
 import Description from "./Description";
 import dataCarousel from "../assets/data/dataCarousel";
 
-const Main = () => {
+    
+const Main = ({ setTitleCurrent }) => {
+    useEffect(() => {
+        setTitleCurrent("Yann Letouzey");
+    }, []);
     const nextRef = useRef();
     const prevRef = useRef();
     const containerRef = useRef();

@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
 import dataEasyMailing from "../assets/data/dataEasyMailing.js";
-const EasyMailing = ( { descSmall }) => {
+const EasyMailing = ( { descSmall, setTitleCurrent }) => {
+
     const desc = descSmall.filter((d) => d.page === "/easy-mailing");
     const cardRef = dataEasyMailing.map(() => useRef());
     useEffect(() => {
+        setTitleCurrent("Yann Letouzey - Projet Easy Mailing");
 
         let sizeScreen = window.innerWidth;
         let heightScreen = window.innerHeight;
