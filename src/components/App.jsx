@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/easy-mailing" element={<EasyMailing descSmall={dataCarousel} />} />
-        <Route path="/easy-time-clock" element={<EasyTimeClock />} />
+        <Route path="/easy-time-clock" element={<EasyTimeClock descSmall={dataCarousel} />} />
       </Routes>
     </Router>
   )
