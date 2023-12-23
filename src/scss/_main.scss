@@ -32,11 +32,46 @@
     justify-content: space-around;
     overflow: hidden;
     perspective: 40rem;
+    &__title {
+        display: none;
+    }
+    @media screen and (min-width: 39rem) {
+        &__title {
+            display: flex;
+            justify-content: center;
+            font-family: sans-serif;
+            position: absolute;
+            top: 8rem;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 2px var.$color;
+            text-stroke: 2px var.$color;
+            font-size: 3rem;
+            justify-content: center;
+            width: 100%;
+            scale: 0;
+            transition-duration: 0.3s;
+            opacity: 0.05;
+        }
+    }
+    @media screen and (min-width: 50rem) {
+        &__title {
+            font-size: 4rem;
+            top: 7rem;
+        }
+    }
+    @media screen and (min-width: 56rem) {
+        &__title {
+            top: 6rem;
+            font-size: 5rem;
+        }
+    }
     &__description {
         color: var.$color;
         width: 90%;
         margin: auto;
         font-size: 0.9rem;
+        top: -5rem;
         // Height screen
         @media screen and (min-height: 43rem) {
             margin: 0.5rem auto;
@@ -50,7 +85,7 @@
             margin: 1rem auto 2rem;
             font-size: 1rem;
         }
-        @media screen and (min-width: 38rem) {
+        @media screen and (min-width: 39rem) {
             width: 85%;
         }
     }

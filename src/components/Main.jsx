@@ -16,6 +16,10 @@ const Main = ({ setTitleCurrent }) => {
     const degValue = 90;
     const [degreesValue, setDegreesValue] = useState(0);
     const [currentValue, setCurrentValue] = useState(1);
+
+    const [backgroundTitle, setBackgroundTitle] = useState();
+    const backgroundTitleRef = useRef();
+
     const handleClick = (e) => {
         if (e.target.id === "next") {
             if (currentValue < dataCarousel.length) {
@@ -30,9 +34,18 @@ const Main = ({ setTitleCurrent }) => {
             }
         }
     }
+    useEffect(() => {
+        backgroundTitleRef.current.style.scale = '0';
+        setTimeout(() => {
+            setBackgroundTitle(dataCarousel[currentValue - 1].title.replace("-", " ").replace("-", " ").replace(".", " "));
+            backgroundTitleRef.current.style.transitionTimingFunction = `cubic-bezier(.2,1.66,.81,.78)`;
+            backgroundTitleRef.current.style.scale = '1 1.4';
+        }, 300)
+    }, [currentValue]);
     return (
         <>
             <main className="main">
+                <h4 ref={backgroundTitleRef} className="main__title">{backgroundTitle}</h4>
                 <Description />
                 <section id="container" className="container">
                     <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} />

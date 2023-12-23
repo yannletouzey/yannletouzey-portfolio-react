@@ -4,7 +4,6 @@ import CarouselDesc from "./CarouselDesc.jsx";
 
 const Carousel = ({currentValue, containerRef, degValue, degreesValue}) => {
     const imgRef = useRef(null);
-    const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseMove = (e) => {
         const rect = imgRef.current.getBoundingClientRect();
@@ -55,6 +54,7 @@ const Carousel = ({currentValue, containerRef, degValue, degreesValue}) => {
             faceElement.current.style.transform = `rotateY(${degValue * index}deg) translateZ(${offsetFace}px)`;
         })
     }, []);
+
     return (
         <div id="container__carousel" className="container__carousel" ref={containerRef}>
             {dataCarousel.map((dataCarouselElement, index) => {

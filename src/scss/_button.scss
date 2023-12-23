@@ -6,7 +6,7 @@
     width: var.$width;
     position: relative;
     z-index: -10;
-    @media screen and (min-width: 38rem) {
+    @media screen and (min-width: 39rem) {
         position: absolute;
         translate: 0 0;
         width: var.$width;
@@ -41,7 +41,7 @@
             left: -0%;
             top: -0%;
         }
-        @media screen and (min-width: 38rem) {
+        @media screen and (min-width: 39rem) {
             &:hover #square-prev path, &:hover #square-next path {
                 stroke-dashoffset: var.$stroke-square;
                 transition-duration: 0.5s;
@@ -61,14 +61,14 @@
     #arrow-prev path, #arrow-next path {
         position: absolute;
         z-index: -10;
-        @media screen and (min-width: 38rem) {
+        @media screen and (min-width: 39rem) {
             stroke-dasharray: var.$stroke-arrow;
             stroke-dashoffset: var.$stroke-arrow;
         }
     }
     #square-prev path, #square-next path {
         stroke-dasharray: var.$stroke-square;
-        @media screen and (max-width: 38rem) {
+        @media screen and (max-width: 39rem) {
             stroke-dashoffset: var.$stroke-square;
         }
     }
