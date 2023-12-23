@@ -6,11 +6,8 @@ import ScreenStart from './ScreenStart'
 import EasyMailing from './EasyMailing';
 import EasyTimeClock from './EasyTimeClock';
 import dataCarousel from '../assets/data/dataCarousel.js';
-console.log(dataCarousel);
-function App() {
-
+const App = () => {
   const [titleCurrent, setTitleCurrent] = useState("");
-
   useEffect(() => {
       document.title = titleCurrent;
   }, [titleCurrent]);
