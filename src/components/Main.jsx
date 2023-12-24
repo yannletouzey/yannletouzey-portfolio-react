@@ -6,7 +6,7 @@ import dataCarousel from "../assets/data/dataCarousel";
 import Footer from "./Footer";
 
     
-const Main = ({ setTitleCurrent }) => {
+const Main = ({ setTitleCurrent, currentValue, setCurrentValue }) => {
     useEffect(() => {
         setTitleCurrent("Yann Letouzey");
     }, []);
@@ -15,7 +15,7 @@ const Main = ({ setTitleCurrent }) => {
     const containerRef = useRef();
     const degValue = 90;
     const [degreesValue, setDegreesValue] = useState(0);
-    const [currentValue, setCurrentValue] = useState(1);
+    // const [currentValue, setCurrentValue] = useState(1);
 
     const [backgroundTitle, setBackgroundTitle] = useState();
     const backgroundTitleRef = useRef();
