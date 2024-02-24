@@ -40,10 +40,10 @@ const dataCarousel = [
   },
   {
     id: 3,
-    imgUrl: new URL("../../assets/img/screenshot-website/selim-dm.png", import.meta.url),
+    imgUrl: new URL("../../assets/img/screenshot-website/selim-portfolio.png", import.meta.url),
     alt: "Image de la page d'accueil du portfolio de selim-dm",
     title: "selim-dm.portfolio",
-    link: "https://portfolio-selim.vercel.app/",
+    link: "https://portfolio-selim-react.vercel.app/",
     page: "/portfolio-selim",
     techno: {
       sass: new URL('../../assets/icons/sass.svg', import.meta.url),
