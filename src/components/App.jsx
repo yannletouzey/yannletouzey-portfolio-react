@@ -6,22 +6,16 @@ import ScreenStart from './ScreenStart'
 import EasyMailing from './EasyMailing';
 import EasyTimeClock from './EasyTimeClock';
 import dataCarousel from '../assets/data/dataCarousel.js';
-import home from '../assets/img/easy-mailing/home.png'
+
 const App = () => {
   const [currentValue, setCurrentValue] = useState(1);
-  const bgImageRef = useRef();
   const [titleCurrent, setTitleCurrent] = useState("");
   useEffect(() => {
       document.title = titleCurrent;
-      console.log(dataCarousel);
   }, [titleCurrent]);
 
-  useEffect(() => {
-    bgImageRef.current.style.backgroundImage = `url(${dataCarousel[currentValue - 1].imgUrl})`;
-  }, [currentValue]);
   return (
     <Router>
-      <div className="bg-image" ref={bgImageRef}></div>
       <ScreenStart />
       <Header />
       <Routes>
