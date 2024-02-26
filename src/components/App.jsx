@@ -6,7 +6,6 @@ import ScreenStart from './ScreenStart'
 import EasyMailing from './EasyMailing';
 import EasyTimeClock from './EasyTimeClock';
 import dataCarousel from '../assets/data/dataCarousel.js';
-import MainSmallScreen from './MainSmallScreen.jsx';
 
 const App = () => {
 
@@ -40,11 +39,7 @@ const App = () => {
       <ScreenStart />
       <Header />
       <Routes>
-        {screenNotCompatible ? (
-          <Route path="/" element={<MainSmallScreen setTitleCurrent={setTitleCurrent} currentValue={currentValue} setCurrentValue={setCurrentValue} />} />
-        ) : (
-          <Route path="/" element={<Main setTitleCurrent={setTitleCurrent} currentValue={currentValue} setCurrentValue={setCurrentValue} />} />
-        )}
+        <Route path="/" element={<Main setTitleCurrent={setTitleCurrent} currentValue={currentValue} setCurrentValue={setCurrentValue} screenNotCompatible={screenNotCompatible} />} />
         <Route path="/easy-mailing" element={<EasyMailing setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
         <Route path="/easy-time-clock" element={<EasyTimeClock setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
       </Routes>

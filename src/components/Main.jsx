@@ -5,7 +5,7 @@ import Description from "./Description";
 import dataCarousel from "../assets/data/dataCarousel";
 import Footer from "./Footer";
 
-const Main = ({ setTitleCurrent, currentValue, setCurrentValue }) => {
+const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompatible }) => {
 
   useEffect(() => {
     setTitleCurrent("Yann Letouzey");
@@ -50,8 +50,14 @@ const Main = ({ setTitleCurrent, currentValue, setCurrentValue }) => {
         <h4 ref={backgroundTitleRef} className="main__title">{backgroundTitle}</h4>
         <Description />
         <section id="container" className="container">
-          <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} />
-          <Buttons nextRef={nextRef} prevRef={prevRef} handleClick={handleClick}/>
+        {screenNotCompatible ? (
+          <p className="main__text">Ce site n'est pas compatible avec cette appareil.</p>
+        ) : (
+          <>
+            <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} />
+            <Buttons nextRef={nextRef} prevRef={prevRef} handleClick={handleClick}/>
+          </>
+        )}
         </section>
       </main>
       <Footer />

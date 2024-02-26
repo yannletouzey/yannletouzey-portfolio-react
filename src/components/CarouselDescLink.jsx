@@ -57,7 +57,7 @@ const CarouselDescLink = ({dataCarouselElement}) => {
         </div>
         : 
         <>
-          <p className="container__carousel--msgNotOnline" ref={tooltip}>"{dataCarouselElement.title}" n'est pas encore en ligne</p>
+          <p className="container__carousel--msgNotOnline" ref={tooltip} >"{dataCarouselElement.title}" n'est pas encore en ligne</p>
           <p onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>{dataCarouselElement.title}</p>
         </>}
     </div>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import CarouselDescTechno from "./CarouselDescTechno.jsx";
 import CarouselDescLink from "./CarouselDescLink.jsx";
+import Stack from "./Stack.jsx";
 
 const CarouselDesc = ({dataCarouselElement}) => {
   return (
@@ -12,6 +13,7 @@ const CarouselDesc = ({dataCarouselElement}) => {
         key={dataCarouselElement.id} 
         src={dataCarouselElement.techno} 
       />
+      <Stack stack={dataCarouselElement.stack} />
       {dataCarouselElement.descSmall && 
         <Link 
           to={dataCarouselElement.page} 
