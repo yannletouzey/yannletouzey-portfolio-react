@@ -1,4 +1,3 @@
-import { useRef } from "react";
 const Buttons = ({prevRef, nextRef, handleClick}) => {
     
   return (
