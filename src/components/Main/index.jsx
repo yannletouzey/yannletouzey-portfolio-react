@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from "react";
-import Buttons from "./Buttons";
-import Carousel from "./Carousel";
-import Description from "./Description";
-import dataCarousel from "../assets/data/dataCarousel";
-import Footer from "./Footer";
+import Buttons from "./Buttons/index.jsx";
+import Carousel from "./Carousel/index.jsx";
+import Description from "../Description.jsx";
+import dataCarousel from "../../assets/data/dataCarousel.js";
+import Footer from "../Footer/index.jsx";
+import './index.scss';
 
 const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompatible }) => {
 

@@ -1,6 +1,13 @@
-@use './_var';
+@use '../../../../scss/var';
 
-.container__carousel--desc--more {
+.container__carousel--desc {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  transform: translateZ(0.01px);
+  &--more {
     position: relative;
     width: 1rem;
     height: 1rem;
@@ -46,12 +53,13 @@
         width: var(--size-one);
         height: var(--size-two);
     }
+  }
 }
 .hover {
-    display: none;
+  display: none;
 }
 .container__carousel--desc--more:hover .container__carousel--desc--more--msg {
-    scale: 1;
-    translate: 1rem 0rem;
-    transition-timing-function: cubic-bezier(.31,1.78,.65,.89);
+  scale: 1;
+  translate: 1rem 0rem;
+  transition-timing-function: cubic-bezier(.31,1.78,.65,.89);
 }

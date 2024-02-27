@@ -1,5 +1,5 @@
+import './index.scss';
 const Buttons = ({prevRef, nextRef, handleClick}) => {
-    
   return (
     <div className="button">
       <button id="prev" className="button__prev button__btn" ref={prevRef} onClick={handleClick}>

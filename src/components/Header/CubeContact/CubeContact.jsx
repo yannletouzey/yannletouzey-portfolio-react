@@ -1,4 +1,5 @@
-import confetti from '../js/confetti';
+import confetti from '../../../js/confetti';
+import './index.scss';
 
 const CubeContact = ( {id, link, logo, alt}) => {
   const handleMouseEnter = (e) => {

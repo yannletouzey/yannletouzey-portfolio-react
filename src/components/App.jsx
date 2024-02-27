@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import Header from './Header'
+import Header from './Header';
 import Main from './Main'
-import ScreenStart from './ScreenStart'
-import EasyMailing from './EasyMailing';
-import EasyTimeClock from './EasyTimeClock';
+import ScreenStart from './ScreenStart/index.jsx'
+import EasyMailing from './Main/DetailsPages/EasyMailing.jsx';
+import EasyTimeClock from './Main/DetailsPages/EasyTimeClock.jsx';
 import dataCarousel from '../assets/data/dataCarousel.js';
 
 const App = () => {

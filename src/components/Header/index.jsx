@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
-import linkedInLogo from '../assets/img/logos/linkedin.png';
-import githubLogo from '../assets/img/logos/github.png';
-import twitterLogo from '../assets/img/logos/logo-x.png';
-import Burger from './Burger';
-import CubeContact from './CubeContact';
+import { useState } from 'react';
+import linkedInLogo from '../../assets/img/logos/linkedin.png';
+import githubLogo from '../../assets/img/logos/github.png';
+import twitterLogo from '../../assets/img/logos/logo-x.png';
+import Burger from './Burger/index.jsx';
+import CubeContact from './CubeContact/CubeContact.jsx';
 import { Link } from 'react-router-dom';
+import './index.scss';
 
 const Header = () => {
     const [stateContactAppear, setStateContactAppear] = useState('is-closed');

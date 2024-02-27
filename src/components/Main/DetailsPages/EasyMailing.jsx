@@ -1,11 +1,15 @@
 import { useEffect, useRef } from "react";
-import dataEasyTimeClock from "../assets/data/dataEasyTimeClock.js";
-import Footer from "./Footer.jsx";
-const EasyTimeClock = ( { descSmall, setTitleCurrent } ) => {
-    const desc = descSmall.filter((d) => d.page === "/easy-time-clock");
-    const cardRef = dataEasyTimeClock.map(() => useRef());
+import dataEasyMailing from "../../../assets/data/dataEasyMailing.js";
+import Footer from "../../Footer/index.jsx";
+import './index.scss';
+
+const EasyMailing = ( { descSmall, setTitleCurrent }) => {
+
+    const desc = descSmall.filter((d) => d.page === "/easy-mailing");
+    const cardRef = dataEasyMailing.map(() => useRef());
     useEffect(() => {
-        setTitleCurrent("Yann Letouzey - Projet Easy Time Clock");
+        setTitleCurrent("Yann Letouzey - Projet Easy Mailing");
+
         let sizeScreen = window.innerWidth;
         let heightScreen = window.innerHeight;
         let topTriggerScreen = heightScreen - (heightScreen / 3) * 2;
@@ -81,7 +85,7 @@ const EasyTimeClock = ( { descSmall, setTitleCurrent } ) => {
                     {/* <button className="main__description--button" onClick={handleDescription}></button> */}
                 </div>
                 <div className="main__container">
-                    {dataEasyTimeClock.map((data, index) => (
+                    {dataEasyMailing.map((data, index) => (
                         <div className="main__container--card card" key={`container__container--card-${index}`} ref={cardRef[index]}>
                             <div className="main__container--card--containerImg">
                                 <img src={data.img} alt={data.alt} />
@@ -95,4 +99,4 @@ const EasyTimeClock = ( { descSmall, setTitleCurrent } ) => {
         </>
     )
 }
-export default EasyTimeClock;
+export default EasyMailing;

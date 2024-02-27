@@ -1,4 +1,5 @@
-import technoImg from "../assets/data/dataTechno";
+import technoImg from "../../../../assets/data/dataTechno";
+import './index.scss';
 
 const CarouselDescTechno = ({ src }) => {
   return (

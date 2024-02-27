@@ -1,4 +1,6 @@
 import { useEffect, useState, useRef } from "react";
+import './index.scss';
+
 const CarouselDescLink = ({dataCarouselElement}) => {
   const linkRef = useRef();
   const [link, setLink] = useState();

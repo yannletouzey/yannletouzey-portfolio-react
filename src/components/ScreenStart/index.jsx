@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-
+import './index.scss';
 const ScreenStart = () => {
   const timeRotate = 500;
   const timeDisapear = timeRotate * 3;

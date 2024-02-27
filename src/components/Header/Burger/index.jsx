@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-
+import './index.scss';
 const Burger = ({stateContactAppear, setStateContactAppear, stateFirstname, setStateFirstname, stateLastname, setStateLastname}) => {
   const [stateBurgerContainer, setStateBurgerContainer] = useState('is-closed');
   const [stateBurger, setStateBurger] = useState('is-closed');

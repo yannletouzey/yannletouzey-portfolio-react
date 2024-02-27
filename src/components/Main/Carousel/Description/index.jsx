@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import CarouselDescTechno from "./CarouselDescTechno.jsx";
-import CarouselDescLink from "./CarouselDescLink.jsx";
-import Stack from "./Stack.jsx";
+import CarouselDescTechno from "../Techno/index.jsx";
+import CarouselDescLink from "../Link/index.jsx";
+import Stack from "../Stacks/index.jsx";
+import './index.scss';
 
 const CarouselDesc = ({dataCarouselElement}) => {
   return (
