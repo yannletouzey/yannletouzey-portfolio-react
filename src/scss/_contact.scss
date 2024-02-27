@@ -1,101 +1,101 @@
 @use './_var';
 
 .header__contact {
-    position: absolute;
+  position: absolute;
+  height: var.$sizes-cube;
+  width: calc(var.$sizes-cube * 5.5);
+  left: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &.is-opened {
+    transition-duration: var.$duration-animation-button-header;
+    transform: translateX(- calc(var.$sizes-cube * 6));
+    @media screen and (min-width: 50rem) {
+      width: calc(var.$sizes-cube * 8);
+      transform: translateX(- calc(var.$sizes-cube * 8));
+      &--cube:hover {
+        transition-duration: 0.5s;
+        scale: 1.2;
+      }
+    }
+    @media screen and (min-width: 75rem) {
+      transform: translateX(- calc(var.$sizes-cube * 10));
+    }
+  }
+  &.is-closed {
+    transition-duration: var.$duration-animation-button-header;
+    transform: translateX(0);
+  }
+  &--cube {
+    width: var.$sizes-cube;
     height: var.$sizes-cube;
-    width: calc(var.$sizes-cube * 5.5);
-    left: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    &.is-opened {
-        transition-duration: var.$duration-animation-button-header;
-        transform: translateX(- calc(var.$sizes-cube * 6));
-        @media screen and (min-width: 50rem) {
-            width: calc(var.$sizes-cube * 8);
-            transform: translateX(- calc(var.$sizes-cube * 8));
-            &--cube:hover {
-                transition-duration: 0.5s;
-                scale: 1.2;
-            }
-        }
-        @media screen and (min-width: 75rem) {
-            transform: translateX(- calc(var.$sizes-cube * 10));
-        }
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin 15s infinite linear;
+    .face {
+      position: absolute;
+      width: var.$sizes-cube;
+      height: var.$sizes-cube;
+      background: var.$background-color;
+      img {
+        width: 100%;
+      }
     }
-    &.is-closed {
-        transition-duration: var.$duration-animation-button-header;
-        transform: translateX(0);
+    &:hover {
+      animation-play-state: paused;
     }
-    &--cube {
-        width: var.$sizes-cube;
-        height: var.$sizes-cube;
-        position: relative;
-        transform-style: preserve-3d;
-        animation: spin 15s infinite linear;
-        .face {
-            position: absolute;
-            width: var.$sizes-cube;
-            height: var.$sizes-cube;
-            background: var.$background-color;
-            img {
-                width: 100%;
-            }
-        }
-        &:hover {
-            animation-play-state: paused;
-        }
-        .top {
-            transform: rotateX(90deg) translateZ(calc(var.$sizes-cube / 2));
-        }
-        .bottom {
-            transform: rotateX(-90deg) translateZ(calc(var.$sizes-cube / 2));
-        }
-        .left {
-            transform: rotateY(-90deg) translateZ(calc(var.$sizes-cube / 2));
-        }
-        .right {
-            transform: rotateY(90deg) translateZ(calc(var.$sizes-cube / 2));
-        }
-        .front {
-            transform: rotateY(0deg) translateZ(calc(var.$sizes-cube / 2));
-        }
-        .back {
-            transform: rotateY(-180deg) translateZ(calc(var.$sizes-cube / 2));
-        }
-        @media screen and (min-width: 50rem) {
-            width: (var.$sizes-cube * 1.5);
-            height: (var.$sizes-cube * 1.5);
-            .face {
-                width: (var.$sizes-cube * 1.5);
-                height: (var.$sizes-cube * 1.5);
-            }
-            .top {
-                transform: rotateX(90deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
-            }
-            .bottom {
-                transform: rotateX(-90deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
-            }
-            .left {
-                transform: rotateY(-90deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
-            }
-            .right {
-                transform: rotateY(90deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
-            }
-            .front {
-                transform: rotateY(0deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
-            }
-            .back {
-                transform: rotateY(-180deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
-            }
-        }
+    .top {
+      transform: rotateX(90deg) translateZ(calc(var.$sizes-cube / 2));
     }
-    @keyframes spin {
-        from {
-            transform: rotateY(0deg) rotateX(0deg);
-        }
-        to {
-            transform: rotateY(360deg) rotateX(360deg);
-        }
+    .bottom {
+      transform: rotateX(-90deg) translateZ(calc(var.$sizes-cube / 2));
     }
+    .left {
+      transform: rotateY(-90deg) translateZ(calc(var.$sizes-cube / 2));
+    }
+    .right {
+      transform: rotateY(90deg) translateZ(calc(var.$sizes-cube / 2));
+    }
+    .front {
+      transform: rotateY(0deg) translateZ(calc(var.$sizes-cube / 2));
+    }
+    .back {
+      transform: rotateY(-180deg) translateZ(calc(var.$sizes-cube / 2));
+    }
+    @media screen and (min-width: 50rem) {
+      width: (var.$sizes-cube * 1.5);
+      height: (var.$sizes-cube * 1.5);
+      .face {
+        width: (var.$sizes-cube * 1.5);
+        height: (var.$sizes-cube * 1.5);
+      }
+      .top {
+        transform: rotateX(90deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
+      }
+      .bottom {
+        transform: rotateX(-90deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
+      }
+      .left {
+        transform: rotateY(-90deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
+      }
+      .right {
+        transform: rotateY(90deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
+      }
+      .front {
+        transform: rotateY(0deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
+      }
+      .back {
+        transform: rotateY(-180deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
+      }
+    }
+  }
+  @keyframes spin {
+    from {
+      transform: rotateY(0deg) rotateX(0deg);
+    }
+    to {
+      transform: rotateY(360deg) rotateX(360deg);
+    }
+  }
 }

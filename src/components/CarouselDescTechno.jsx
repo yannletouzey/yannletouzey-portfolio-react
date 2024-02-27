@@ -4,7 +4,6 @@ const CarouselDescTechno = ({ src }) => {
   return (
     <div className="container__carousel--desc--techno" key="container__carousel--desc--techno">
       {technoImg.map((dataTechnoElement, index) => {
-        console.log(dataTechnoElement.slug);
         if (src[dataTechnoElement.slug]) {
           return (
             <div 
