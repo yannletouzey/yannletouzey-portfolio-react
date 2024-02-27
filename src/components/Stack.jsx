@@ -1,9 +1,9 @@
-import { useEffect, useState, useRef } from "react";
-import dataCarousel from "../assets/data/dataCarousel.js";
-console.log(dataCarousel);
+import { useEffect, useState } from "react";
+
 const Stack = ({ stack }) => {
 
   const [tagStack, setTagStack] = useState();
+
   useEffect(() => {
     setTagStack(stack)
   }, [])

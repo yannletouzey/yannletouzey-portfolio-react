@@ -5,6 +5,7 @@ const CarouselDescLink = ({dataCarouselElement}) => {
   const [hover, setHover] = useState();
   const [inline, setInline] = useState();
   const tooltip = useRef();
+  
   useEffect(() => {
     setInline(dataCarouselElement.inline);
     if (inline) {
@@ -35,9 +36,11 @@ const CarouselDescLink = ({dataCarouselElement}) => {
       });
     }
   }, [inline]);
+
   useEffect(() => {
       hover ? tooltip.current.style.display = "inline" : tooltip.current.style.display = "none";
   }, [hover])
+
   useEffect(() => {
   }, [link])
   return (
