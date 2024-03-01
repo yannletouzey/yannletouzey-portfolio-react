@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
 import dataCarousel from "../../../assets/data/dataCarousel.js";
 import CarouselDesc from "./Description/index.jsx";
-
 import './index.scss';
+console.log(dataCarousel);
+
 const Carousel = ({currentValue, containerRef, degValue, degreesValue}) => {
 
   const faceRef = dataCarousel.map(() => useRef());

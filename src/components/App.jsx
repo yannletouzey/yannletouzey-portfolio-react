@@ -5,6 +5,7 @@ import Main from './Main'
 import ScreenStart from './ScreenStart/index.jsx'
 import EasyMailing from './Main/DetailsPages/EasyMailing.jsx';
 import EasyTimeClock from './Main/DetailsPages/EasyTimeClock.jsx';
+import CirclePortfolio from './Main/DetailsPages/CirclePortfolio.jsx';
 import dataCarousel from '../assets/data/dataCarousel.js';
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Main setTitleCurrent={setTitleCurrent} currentValue={currentValue} setCurrentValue={setCurrentValue} screenNotCompatible={screenNotCompatible} />} />
+        <Route path='/circle-portfolio' element={<CirclePortfolio setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
         <Route path="/easy-mailing" element={<EasyMailing setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
         <Route path="/easy-time-clock" element={<EasyTimeClock setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
       </Routes>

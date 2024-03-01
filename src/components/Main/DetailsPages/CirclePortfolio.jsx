@@ -1,14 +1,13 @@
 import { useEffect, useRef } from "react";
-import dataEasyMailing from "../../../assets/data/dataEasyMailing.js";
+import dataCirclePortfolio from "../../../assets/data/dataCirclePortfolio.js";
 import Footer from "../../Footer/index.jsx";
 import './index.scss';
-
-const EasyMailing = ({ descSmall, setTitleCurrent }) => {
-
-  const desc = descSmall.filter((d) => d.page === "/easy-mailing");
-  const cardRef = dataEasyMailing.map(() => useRef());
+console.log(dataCirclePortfolio);
+const CirclePortfolio = ({ descSmall, setTitleCurrent }) => {
+  const desc = descSmall.filter((d) => d.page === "/circle-portfolio");
+  const cardRef = dataCirclePortfolio.map(() => useRef());
   useEffect(() => {
-    setTitleCurrent("Yann Letouzey - Projet Easy Mailing");
+    setTitleCurrent("Yann Letouzey - Projet Circle Portfolio");
 
     let sizeScreen = window.innerWidth;
     let heightScreen = window.innerHeight;
@@ -79,24 +78,26 @@ const EasyMailing = ({ descSmall, setTitleCurrent }) => {
   }, [])
   return (
     <>
-      <main className="main">
-        <div className="main__description">
-          {desc.map(d => d.descSmall)}
-          {/* <button className="main__description--button" onClick={handleDescription}></button> */}
-        </div>
-        <div className="main__container">
-          {dataEasyMailing.map((data, index) => (
-            <div className="main__container--card card" key={`container__container--card-${index}`} ref={cardRef[index]}>
-              <div className="main__container--card--containerImg">
-                <img src={data.img} alt={data.alt} />
-              </div>
-              <div className="main__container--card--containerDesc">{data.desc}</div>
+        <main className="main">
+            <div className="main__description">
+                {desc.map(d => d.descSmall)}
+                {/* <button className="main__description--button" onClick={handleDescription}></button> */}
             </div>
-          ))}
-        </div>
-      </main>
-      <Footer />
+            <div className="main__container">
+                {dataCirclePortfolio.map((data, index) => (
+                    <div className="main__container--card card" key={`container__container--card-${index}`} ref={cardRef[index]}>
+                        <div className="main__container--card--containerImg">
+                            <img src={data.img} alt={data.alt} />
+                        </div>
+                        <div className="main__container--card--containerDesc">{data.desc}</div>
+                    </div>
+                ))}
+            </div>
+
+        </main>
+        <Footer />
     </>
   )
 }
-export default EasyMailing;
+
+export default CirclePortfolio
