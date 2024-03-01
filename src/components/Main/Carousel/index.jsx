@@ -35,7 +35,6 @@ const Carousel = ({currentValue, containerRef, degValue, degreesValue, setDegree
     faceRef.forEach((faceElement, index) => {
       faceElement.current.style.transform = `rotateY(${degValue * index}deg) translateZ(${offsetFace}px)`;
     })
-    console.log(currentValue, degValue, degreesValue);
   }, []);
   
   const imgRef = useRef();
