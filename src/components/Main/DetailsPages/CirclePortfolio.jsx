@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import dataCirclePortfolio from "../../../assets/data/dataCirclePortfolio.js";
 import Footer from "../../Footer/index.jsx";
 import './index.scss';
-console.log(dataCirclePortfolio);
+
 const CirclePortfolio = ({ descSmall, setTitleCurrent }) => {
   const desc = descSmall.filter((d) => d.page === "/circle-portfolio");
   const cardRef = dataCirclePortfolio.map(() => useRef());
