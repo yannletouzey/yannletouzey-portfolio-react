@@ -3,7 +3,7 @@ import dataCarousel from "../../../assets/data/dataCarousel.js";
 import CarouselDesc from "./Description/index.jsx";
 import './index.scss';
 
-const Carousel = ({currentValue, containerRef, degValue, degreesValue}) => {
+const Carousel = ({currentValue, containerRef, degValue, degreesValue, setDegreesValue, setCurrentValue}) => {
 
   const faceRef = dataCarousel.map(() => useRef());
 
@@ -29,12 +29,13 @@ const Carousel = ({currentValue, containerRef, degValue, degreesValue}) => {
       }
     })
   }, [degreesValue])
-
+  
   useEffect(() => {
     const offsetFace = (containerRef.current.clientWidth / 2);
     faceRef.forEach((faceElement, index) => {
       faceElement.current.style.transform = `rotateY(${degValue * index}deg) translateZ(${offsetFace}px)`;
     })
+    console.log(currentValue, degValue, degreesValue);
   }, []);
   
   const imgRef = useRef();

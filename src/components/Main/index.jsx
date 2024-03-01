@@ -55,7 +55,7 @@ const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompati
           <p className="main__text">Ce site n'est pas compatible avec cette appareil.</p>
         ) : (
           <>
-            <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} />
+            <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} setDegreesValue={setDegreesValue} currentValue={currentValue} setCurrentValue={setCurrentValue} />
             <Buttons nextRef={nextRef} prevRef={prevRef} handleClick={handleClick}/>
           </>
         )}

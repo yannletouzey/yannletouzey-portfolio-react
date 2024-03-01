@@ -12,7 +12,6 @@ const App = () => {
 
   const [currentValue, setCurrentValue] = useState(1);
   const [titleCurrent, setTitleCurrent] = useState("");
-
   const [screenWidthIsMobile, setScreenWidthIsMobile] = useState(window.innerWidth <= 800);
   const [agentUserIsMobile, setAgentUserIsMobile] = useState(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
   const [screenNotCompatible, setScreenNotCompatible] = useState(screenWidthIsMobile || agentUserIsMobile);
@@ -33,6 +32,9 @@ const App = () => {
 
   useEffect(() => {
     document.title = titleCurrent;
+    if (location.pathname !== '/') {
+      setCurrentValue(1);
+    }
   }, [titleCurrent]);
 
   return (
