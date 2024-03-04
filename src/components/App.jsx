@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Header from './Header';
 import Main from './Main'
@@ -38,7 +38,7 @@ const App = () => {
   }, [titleCurrent]);
 
   return (
-    <Router>
+    <>
       <ScreenStart />
       <Header />
       <Routes>
@@ -47,7 +47,7 @@ const App = () => {
         <Route path="/easy-mailing" element={<EasyMailing setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
         <Route path="/easy-time-clock" element={<EasyTimeClock setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
       </Routes>
-    </Router>
+    </>
   )
 }
 
