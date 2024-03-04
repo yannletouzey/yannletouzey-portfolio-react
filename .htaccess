@@ -1,5 +1,5 @@
 <IfModule mod_rewrite.c>
-
+  RewriteRule ^(wp-admin|wp-content|wp-includes|wp-json)($|/) - [L]
   RewriteEngine On
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
@@ -7,5 +7,4 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
   RewriteRule . /index.html [L]
-
 </IfModule>
