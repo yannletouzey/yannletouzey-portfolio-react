@@ -1,23 +1,6 @@
 const dataCarousel = [
   {
     id: 1,
-    imgUrl: new URL("../../assets/img/screenshot-website/circle-portfolio.jpeg", import.meta.url),
-    alt: "Image de la page d'accueil d'un portfolio avec les photos alignées en cercle",
-    title: "circle-portfolio",
-    link: "https://circle-portfolio-bay.vercel.app/",
-    page: "/circle-portfolio",
-    techno: {
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    descSmall: "J'ai essayé de refaire le carrousel du site https://www.clouarchitects.com/.",
-    descFull: "J'ai essayé de refaire le carrousel du site https://www.clouarchitects.com/.",
-    seriousProject: true
-  },
-  {
-    id: 2,
     imgUrl: new URL("../../assets/img/screenshot-website/easy-mailing/accueil.png", import.meta.url),
     alt: "Image de la page d'accueil de easy-mailing",
     title: "easy-mailing",
@@ -37,7 +20,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 3,
+    id: 2,
     imgUrl: new URL("../../assets/img/screenshot-website/1440x900.png", import.meta.url),
     alt: "Image de la page d'accueil de easy-time-clock",
     title: "easy-time-clock",
@@ -56,7 +39,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 4,
+    id: 3,
     imgUrl: new URL("../../assets/img/screenshot-website/selim-portfolio.png", import.meta.url),
     alt: "Image de la page d'accueil du portfolio de selim-dm",
     title: "selim-dm.portfolio",
@@ -64,11 +47,28 @@ const dataCarousel = [
     page: "/portfolio-selim",
     techno: {
       sass: new URL('../../assets/icons/sass.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url)
+      react: new URL('../../assets/icons/react.svg', import.meta.url)
     },
     stack: "front-end",
     inline: true,
     desc: "Portfolio de Selim DM. Un potographe de qualité.",
+    seriousProject: true
+  },
+  {
+    id: 4,
+    imgUrl: new URL("../../assets/img/screenshot-website/circle-portfolio.jpeg", import.meta.url),
+    alt: "Image de la page d'accueil d'un portfolio avec les photos alignées en cercle",
+    title: "circle-portfolio",
+    link: "https://circle-portfolio-bay.vercel.app/",
+    page: "/circle-portfolio",
+    techno: {
+      css: new URL('../../assets/icons/css.svg', import.meta.url),
+      js: new URL('../../assets/icons/js.svg', import.meta.url)
+    },
+    stack: "front-end",
+    inline: true,
+    descSmall: "J'ai essayé de refaire le carrousel du site https://www.clouarchitects.com/.",
+    descFull: "J'ai essayé de refaire le carrousel du site https://www.clouarchitects.com/.",
     seriousProject: true
   },
   {
@@ -235,6 +235,24 @@ const dataCarousel = [
     descSmall: "",
     descFull: "Pas encore de description",
     seriousProject: true
+  },
+  {
+    id: 15,
+    imgUrl: new URL("../../assets/img/fun-with-flags/home-page.jpg", import.meta.url),
+    alt: "Image de la page d'accueil de fun-with-flags-js",
+    title: "fun-with-flags",
+    link: "https://fun-with-flags-js.vercel.app/",
+    page: "/fun-with-flags",
+    techno: {
+      css: new URL('../../assets/icons/css.svg', import.meta.url),
+      js: new URL('../../assets/icons/js.svg', import.meta.url),
+      react: new URL('../../assets/icons/react.svg', import.meta.url)
+    },
+    stack: "front-end",
+    inline: true,
+    descSmall: "",
+    descFull: "Pas encore de description",
+    seriousProject: false
   }
 ]
 export default dataCarousel;
