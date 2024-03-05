@@ -1,22 +1,16 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useRef, useEffect } from "react";
 import Buttons from "./Buttons/index.jsx";
 import Carousel from "./Carousel/index.jsx";
 import Description from "../Description.jsx";
 import dataCarousel from "../../assets/data/dataCarousel.js";
-import Footer from "../Footer/index.jsx";
 import './index.scss';
 
-const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompatible }) => {
-
-  useEffect(() => {
-    setTitleCurrent("Yann Letouzey");
-  }, []);
+const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompatible, degValue, degreesValue, setDegreesValue }) => {
 
   const nextRef = useRef();
   const prevRef = useRef();
   const containerRef = useRef();
-  const degValue = 90;
-  const [degreesValue, setDegreesValue] = useState(0);
 
   const [backgroundTitle, setBackgroundTitle] = useState();
   const backgroundTitleRef = useRef();
@@ -35,6 +29,10 @@ const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompati
       }
     }
   }
+  
+  useEffect(() => {
+    setTitleCurrent("Yann Letouzey");
+  }, []);
 
   useEffect(() => {
     backgroundTitleRef.current.style.scale = '0';
@@ -46,23 +44,20 @@ const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompati
   }, [currentValue]);
 
   return (
-    <>
-      <main className="main">
-        <h4 ref={backgroundTitleRef} className="main__title">{backgroundTitle}</h4>
-        <Description />
-        <section id="container" className="container">
-        {screenNotCompatible ? (
-          <p className="main__text">Ce site n'est pas compatible avec cette appareil.</p>
-        ) : (
-          <>
-            <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} setDegreesValue={setDegreesValue} currentValue={currentValue} setCurrentValue={setCurrentValue} />
-            <Buttons nextRef={nextRef} prevRef={prevRef} handleClick={handleClick}/>
-          </>
-        )}
-        </section>
-      </main>
-      <Footer />
-    </>
+    <main className="main">
+      <h4 ref={backgroundTitleRef} className="main__title">{backgroundTitle}</h4>
+      <Description />
+      <section id="container" className="container">
+      {screenNotCompatible ? (
+        <p className="main__text">Ce site n'est pas compatible avec cette appareil.</p>
+      ) : (
+        <>
+          <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} setDegreesValue={setDegreesValue} currentValue={currentValue} setCurrentValue={setCurrentValue} />
+          <Buttons nextRef={nextRef} prevRef={prevRef} handleClick={handleClick}/>
+        </>
+      )}
+      </section>
+    </main>
   )
 }
 export default Main;

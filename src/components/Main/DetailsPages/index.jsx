@@ -1,14 +1,17 @@
-import { useEffect, useRef } from "react";
-import dataCirclePortfolio from "../../../assets/data/dataCirclePortfolio.js";
-import Footer from "../../Footer/index.jsx";
+/* eslint-disable react/prop-types */
+import { useEffect, useRef } from 'react'
+import { useParams } from 'react-router-dom'
+import dataDetailPage from '../../../assets/data/dataDetailPage';
 import './index.scss';
 
-const CirclePortfolio = ({ descSmall, setTitleCurrent }) => {
-  const desc = descSmall.filter((d) => d.page === "/circle-portfolio");
-  const cardRef = dataCirclePortfolio.map(() => useRef());
+export default function DetailsPage({ descSmall, setTitleCurrent }) {
+  const detailPageCurrent = useParams();
+  const desc = descSmall.filter((d) => d.page === `/${detailPageCurrent.project}`);
+  const data = dataDetailPage.filter((d) => d.name === `${desc[0].title}`);
+  const cardRef = data[0].data.map(() => useRef());
+  
   useEffect(() => {
-    setTitleCurrent("Yann Letouzey - Projet Circle Portfolio");
-
+    setTitleCurrent(`Yann Letouzey - Projet ${desc[0].title}`);
     let sizeScreen = window.innerWidth;
     let heightScreen = window.innerHeight;
     let topTriggerScreen = heightScreen - (heightScreen / 3) * 2;
@@ -75,29 +78,24 @@ const CirclePortfolio = ({ descSmall, setTitleCurrent }) => {
         }
       })
     })
-  }, [])
-  return (
-    <>
-        <main className="main">
-            <div className="main__description">
-                {desc.map(d => d.descSmall)}
-                {/* <button className="main__description--button" onClick={handleDescription}></button> */}
-            </div>
-            <div className="main__container">
-                {dataCirclePortfolio.map((data, index) => (
-                    <div className="main__container--card card" key={`container__container--card-${index}`} ref={cardRef[index]}>
-                        <div className="main__container--card--containerImg">
-                            <img src={data.img} alt={data.alt} />
-                        </div>
-                        <div className="main__container--card--containerDesc">{data.desc}</div>
-                    </div>
-                ))}
-            </div>
+  }, []);
 
-        </main>
-        <Footer />
-    </>
+  return (
+    <main className="main">
+      <div className="main__description">
+        {desc.map(d => d.descSmall)}
+        {/* <button className="main__description--button" onClick={handleDescription}></button> */}
+      </div>
+      <div className="main__container">
+        {data[0].data.map((d, i) => (
+          <div className="main__container--card card" key={`container__container--card-${i}`} ref={cardRef[i]}>
+            <div className="main__container--card--containerImg">
+              <img src={d.img} alt={d.alt} />
+            </div>
+            <div className="main__container--card--containerDesc">{d.desc}</div>
+          </div>
+        ))}
+      </div>
+    </main>
   )
 }
-
-export default CirclePortfolio

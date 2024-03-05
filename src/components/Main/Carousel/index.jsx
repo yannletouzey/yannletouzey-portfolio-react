@@ -6,7 +6,6 @@ import './index.scss';
 const Carousel = ({currentValue, containerRef, degValue, degreesValue, setDegreesValue, setCurrentValue}) => {
 
   const faceRef = dataCarousel.map(() => useRef());
-
   useEffect(() => {
     containerRef.current.style.transform = `rotateY(${degreesValue}deg)`;
     dataCarousel.forEach((f, index) => {

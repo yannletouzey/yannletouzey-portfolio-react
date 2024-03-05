@@ -3,10 +3,11 @@ import { useState, useEffect } from 'react';
 import Header from './Header';
 import Main from './Main'
 import ScreenStart from './ScreenStart/index.jsx'
-import EasyMailing from './Main/DetailsPages/EasyMailing.jsx';
-import EasyTimeClock from './Main/DetailsPages/EasyTimeClock.jsx';
-import CirclePortfolio from './Main/DetailsPages/CirclePortfolio.jsx';
 import dataCarousel from '../assets/data/dataCarousel.js';
+import DetailsPage from "./Main/DetailsPages/index.jsx";
+
+import Canvas from './Canvas/index.jsx';
+import Footer from './Footer/index.jsx';
 
 const App = () => {
 
@@ -15,6 +16,9 @@ const App = () => {
   const [screenWidthIsMobile, setScreenWidthIsMobile] = useState(window.innerWidth <= 800);
   const [agentUserIsMobile, setAgentUserIsMobile] = useState(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
   const [screenNotCompatible, setScreenNotCompatible] = useState(screenWidthIsMobile || agentUserIsMobile);
+
+  const degValue = 90;
+  const [degreesValue, setDegreesValue] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,15 +44,14 @@ const App = () => {
   return (
     <>
       <ScreenStart />
+      {/* <Canvas degValue={degValue} degreesValue={degreesValue} setDegreesValue={setDegreesValue} /> */}
       <Header />
       <Routes>
-        <Route path="/" element={<Main setTitleCurrent={setTitleCurrent} currentValue={currentValue} setCurrentValue={setCurrentValue} screenNotCompatible={screenNotCompatible} />} />
-        <Route path='/circle-portfolio' element={<CirclePortfolio setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
-        <Route path="/easy-mailing" element={<EasyMailing setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
-        <Route path="/easy-time-clock" element={<EasyTimeClock setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
+        <Route path="/" element={<Main setTitleCurrent={setTitleCurrent} degValue={degValue} currentValue={currentValue} setCurrentValue={setCurrentValue} screenNotCompatible={screenNotCompatible} degreesValue={degreesValue} setDegreesValue={setDegreesValue} />} />
+        <Route path='/:project' element={<DetailsPage setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
       </Routes>
+      <Footer />  
     </>
   )
 }
-
 export default App
