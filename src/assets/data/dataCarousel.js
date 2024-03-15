@@ -56,7 +56,7 @@ const dataCarousel = [
   },
   {
     id: 4,
-    imgUrl: new URL("../../assets/img/screenshot-website/jacks-hand-1.jpeg", import.meta.url),
+    imgUrl: new URL("../../assets/img/screenshot-website/jacks-hand.jpeg", import.meta.url),
     alt: "Image de la page Jack's hand",
     title: "Jack's hand",
     link: "https://hand-animation-one.vercel.app/",
