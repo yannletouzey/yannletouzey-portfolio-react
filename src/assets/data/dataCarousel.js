@@ -72,23 +72,6 @@ const dataCarousel = [
   },
   {
     id: 5,
-    imgUrl: new URL("../../assets/img/screenshot-website/circle-portfolio.jpeg", import.meta.url),
-    alt: "Image de la page d'accueil d'un portfolio avec les photos alignées en cercle",
-    title: "circle-portfolio",
-    link: "https://circle-portfolio-bay.vercel.app/",
-    page: "/circle-portfolio",
-    techno: {
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    descSmall: "J'ai essayé de refaire le carrousel du site https://www.clouarchitects.com/.",
-    descFull: "J'ai essayé de refaire le carrousel du site https://www.clouarchitects.com/.",
-    seriousProject: true
-  },
-  {
-    id: 6,
     imgUrl: new URL("../../assets/img/screenshot-website/bounce-cube.png", import.meta.url),
     alt: "Image de la page d'accueil de bounce-cube",
     title: "bounce-cube",
@@ -104,7 +87,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 7,
+    id: 6,
     imgUrl: new URL("../../assets/img/screenshot-website/wave-cube.png", import.meta.url),
     alt: "Image de la page d'accueil de wave-cube",
     title: "cube-wave",
@@ -120,7 +103,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 8,
+    id: 7,
     imgUrl: new URL("../../assets/img/screenshot-website/haunted-house.png", import.meta.url),
     alt: "Image de la page d'accueil de haunted-house",
     title: "haunted-house",
@@ -137,7 +120,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 9,
+    id: 8,
     imgUrl: new URL("../../assets/img/screenshot-website/home-large.png", import.meta.url),
     alt: "Image de la page d'accueil de statistiques-covid",
     title: "statistiques-covid",
@@ -155,7 +138,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 10,
+    id: 9,
     imgUrl: new URL("../../assets/img/screenshot-website/cube-in-cube.png", import.meta.url),
     alt: "Image de la page d'accueil de cube-in-cube",
     title: "cube-in-cube",
@@ -171,7 +154,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 11,
+    id: 10,
     imgUrl: new URL("../../assets/img/screenshot-website/visuel-padding-margin.png", import.meta.url),
     alt: "Image de la page d'accueil de visual-padding-margin-css",
     title: "padding-margin-css",
@@ -187,7 +170,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 12,
+    id: 11,
     imgUrl: new URL("../../assets/img/screenshot-website/build-cube-css.png", import.meta.url),
     alt: "Image de la page d'accueil de build-cube-css",
     title: "build-cube-css",
@@ -203,7 +186,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 13,
+    id: 12,
     imgUrl: new URL("../../assets/img/screenshot-website/cardiac-cohesion.png", import.meta.url),
     alt: "Image de la page d'accueil de cardiac-cohesion",
     title: "cardiac-cohesion",
@@ -219,7 +202,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 14,
+    id: 13,
     imgUrl: new URL("../../assets/img/screenshot-website/trouve-ta-ville.png", import.meta.url),
     alt: "Image de la page d'accueil de trouve-ta-ville",
     title: "trouve-ta-ville",
@@ -236,7 +219,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 15,
+    id: 14,
     imgUrl: new URL("../../assets/img/screenshot-website/puzzle-game.jpeg", import.meta.url),
     alt: "Image de la page d'accueil de puzzle",
     title: "puzzle-game",
@@ -253,7 +236,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 16,
+    id: 15,
     imgUrl: new URL("../../assets/img/fun-with-flags/home-page.jpg", import.meta.url),
     alt: "Image de la page d'accueil de fun-with-flags-js",
     title: "fun-with-flags",
