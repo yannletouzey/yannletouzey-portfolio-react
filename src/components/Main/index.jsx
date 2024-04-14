@@ -4,6 +4,7 @@ import Buttons from "./Buttons/index.jsx";
 import Carousel from "./Carousel/index.jsx";
 import Description from "../Description.jsx";
 import dataCarousel from "../../assets/data/dataCarousel.js";
+import Text from "./Text.jsx";
 import './index.scss';
 
 const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompatible, degValue, degreesValue, setDegreesValue }) => {
@@ -13,7 +14,7 @@ const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompati
   const containerRef = useRef();
 
   const [backgroundTitle, setBackgroundTitle] = useState();
-  const backgroundTitleRef = useRef();
+  // const backgroundTitleRef = useRef();
 
   const handleClick = (e) => {
     if (e.target.id === "next") {
@@ -33,19 +34,19 @@ const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompati
   useEffect(() => {
     setTitleCurrent("Yann Letouzey");
   }, []);
-
+  
   useEffect(() => {
-    backgroundTitleRef.current.style.scale = '0';
-    setTimeout(() => {
+    // backgroundTitleRef.current.style.scale = '0';
+    // setTimeout(() => {
       setBackgroundTitle(dataCarousel[currentValue - 1].title.replace("-", " ").replace("-", " ").replace(".", " "));
-      backgroundTitleRef.current.style.transitionTimingFunction = `cubic-bezier(.2,1.66,.81,.78)`;
-      backgroundTitleRef.current.style.scale = '1 1.4';
-    }, 300)
+      // backgroundTitleRef.current.style.transitionTimingFunction = `cubic-bezier(.2,1.66,.81,.78)`;
+      // backgroundTitleRef.current.style.scale = '1 1.4';
+    // }, 300)
   }, [currentValue]);
 
   return (
     <main className="main">
-      <h4 ref={backgroundTitleRef} className="main__title">{backgroundTitle}</h4>
+      <Text backgroundTitle={backgroundTitle} />
       <Description />
       <section id="container" className="container">
       {screenNotCompatible ? (

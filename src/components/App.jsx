@@ -6,7 +6,7 @@ import ScreenStart from './ScreenStart/index.jsx'
 import dataCarousel from '../assets/data/dataCarousel.js';
 import DetailsPage from "./Main/DetailsPages/index.jsx";
 
-import Canvas from './Canvas/index.jsx';
+// import Canvas from './Canvas/index.jsx';
 import Footer from './Footer/index.jsx';
 
 const App = () => {
