@@ -11,7 +11,7 @@
   &__contact {
     position: relative;
     text-decoration: none;
-    color: white;
+    color: var.$color;
     display: flex;
     height: 80%;
     align-items: center;
@@ -23,7 +23,7 @@
       top: 65%;
       width: 0;
       height: 2px;
-      background: #fff;
+      background: var.$color;
     }
     &:hover:after {
       transition-duration: 0.3s;
