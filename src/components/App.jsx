@@ -20,6 +20,11 @@ const App = () => {
   const degValue = 90;
   const [degreesValue, setDegreesValue] = useState(0);
 
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const handleMouseMove = (e) => {
+    setMousePos({ x: e.clientX / window.innerWidth - 0.5, y: e.clientY / window.innerHeight - 0.5 });
+  }
+
   useEffect(() => {
     const handleResize = () => {
       setScreenWidthIsMobile(window.innerWidth <= 800);
@@ -42,16 +47,15 @@ const App = () => {
   }, [titleCurrent]);
 
   return (
-    <>
+    <div onMouseMove={handleMouseMove}>
       <ScreenStart />
-      {/* <Canvas degValue={degValue} degreesValue={degreesValue} setDegreesValue={setDegreesValue} /> */}
       <Header />
       <Routes>
-        <Route path="/" element={<Main setTitleCurrent={setTitleCurrent} degValue={degValue} currentValue={currentValue} setCurrentValue={setCurrentValue} screenNotCompatible={screenNotCompatible} degreesValue={degreesValue} setDegreesValue={setDegreesValue} />} />
+        <Route path="/" element={<Main setTitleCurrent={setTitleCurrent} degValue={degValue} currentValue={currentValue} setCurrentValue={setCurrentValue} screenNotCompatible={screenNotCompatible} degreesValue={degreesValue} setDegreesValue={setDegreesValue} mousePos={mousePos} />} />
         <Route path='/:project' element={<DetailsPage setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
       </Routes>
       <Footer />  
-    </>
+    </div>
   )
 }
 export default App

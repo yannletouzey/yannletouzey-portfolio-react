@@ -6,7 +6,7 @@ import Description from "../Description.jsx";
 import dataCarousel from "../../assets/data/dataCarousel.js";
 import './index.scss';
 
-const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompatible, degValue, degreesValue, setDegreesValue }) => {
+const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompatible, degValue, degreesValue, setDegreesValue, mousePos }) => {
 
   const nextRef = useRef();
   const prevRef = useRef();
@@ -14,6 +14,7 @@ const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompati
 
   const [backgroundTitle, setBackgroundTitle] = useState();
   const backgroundTitleRef = useRef();
+  const backgroundTitleShadowRef = useRef();
 
   const handleClick = (e) => {
     if (e.target.id === "next") {
@@ -29,23 +30,31 @@ const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompati
       }
     }
   }
-  
   useEffect(() => {
     setTitleCurrent("Yann Letouzey");
   }, []);
 
+
+  useEffect(() => {
+    backgroundTitleRef.current.style.translate = `${mousePos.x * 10}px ${mousePos.y * 10}px`;
+  }, [mousePos]);
+
   useEffect(() => {
     backgroundTitleRef.current.style.scale = '0';
+    backgroundTitleShadowRef.current.style.scale = '0';
     setTimeout(() => {
       setBackgroundTitle(dataCarousel[currentValue - 1].title.replace("-", " ").replace("-", " ").replace(".", " "));
       backgroundTitleRef.current.style.transitionTimingFunction = `cubic-bezier(.2,1.66,.81,.78)`;
       backgroundTitleRef.current.style.scale = '1 1.4';
+      backgroundTitleShadowRef.current.style.transitionTimingFunction = `cubic-bezier(.2,1.66,.81,.78)`;
+      backgroundTitleShadowRef.current.style.scale = '1 1.4';
     }, 300)
   }, [currentValue]);
 
   return (
     <main className="main">
       <h4 ref={backgroundTitleRef} className="main__title">{backgroundTitle}</h4>
+      <h4 ref={backgroundTitleShadowRef} className="main__title--shadow">{backgroundTitle}</h4>
       <Description />
       <section id="container" className="container">
       {screenNotCompatible ? (
