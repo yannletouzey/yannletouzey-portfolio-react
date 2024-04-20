@@ -1,14 +1,33 @@
 @use '../../scss/var';
 
 .footer {
-    margin-top: auto;
-    height: 5rem;
-    width: 100%;
-    color: var.$color;
+  margin-top: auto;
+  height: 5rem;
+  width: 100%;
+  color: var.$color;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  &__contact {
+    position: relative;
+    text-decoration: none;
+    color: white;
     display: flex;
+    height: 80%;
     align-items: center;
-    justify-content: space-evenly;
-    a {
-        color: var.$color;
+    justify-content: center;
+    padding: 0 0.3rem;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 65%;
+      width: 0;
+      height: 2px;
+      background: #fff;
     }
+    &:hover:after {
+      transition-duration: 0.3s;
+      width: 90%;
+    }
+  }
 }
