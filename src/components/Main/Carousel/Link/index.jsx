@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import './index.scss';
 
-const CarouselDescLink = ({dataCarouselElement}) => {
+const CarouselDescLink = ({ dataCarouselElement }) => {
   const linkRef = useRef();
   const [link, setLink] = useState();
   const [hover, setHover] = useState();
@@ -51,12 +51,12 @@ const CarouselDescLink = ({dataCarouselElement}) => {
         <div className="container__carousel--desc--link--inline" ref={linkRef} onMouseEnter={() => setLink(true)} onMouseLeave={() => setLink(false)}>
           <a href={dataCarouselElement.link} target="_blank" rel="noopener noreferrer">
             <div className="containerLink s1">
-              {dataCarouselElement.title}
+              {dataCarouselElement.slug}
             </div>
           </a> 
           <a href={dataCarouselElement.link} target="_blank" rel="noopener noreferrer">
             <div className="containerLink s2">
-              {dataCarouselElement.title}
+              {dataCarouselElement.slug}
             </div>
           </a>
         </div>

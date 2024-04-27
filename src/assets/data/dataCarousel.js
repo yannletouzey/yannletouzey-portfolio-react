@@ -3,7 +3,8 @@ const dataCarousel = [
     id: 1,
     imgUrl: new URL("../../assets/img/screenshot-website/easy-mailing/accueil.png", import.meta.url),
     alt: "Image de la page d'accueil de easy-mailing",
-    title: "easy-mailing",
+    title: "Easy Mailing",
+    slug: "easy-mailing",
     link: "#",
     page: "/easy-mailing",
     techno: {
@@ -24,7 +25,8 @@ const dataCarousel = [
     id: 2,
     imgUrl: new URL("../../assets/img/screenshot-website/1440x900.png", import.meta.url),
     alt: "Image de la page d'accueil de easy-time-clock",
-    title: "easy-time-clock",
+    title: "Easy Time Clock",
+    slug: "easy-time-clock",
     link: "#",
     page: "/easy-time-clock",
     techno: {
@@ -44,7 +46,8 @@ const dataCarousel = [
     id: 3,
     imgUrl: new URL("../../assets/img/screenshot-website/selim-portfolio.png", import.meta.url),
     alt: "Image de la page d'accueil du portfolio de selim-dm",
-    title: "selim-dm.portfolio",
+    title: "Selim DM Portfolio",
+    slug: "selim-dm.portfolio",
     link: "https://portfolio-selim-react.vercel.app/",
     page: "/portfolio-selim",
     techno: {
@@ -62,6 +65,7 @@ const dataCarousel = [
     imgUrl: new URL("../../assets/img/screenshot-website/jacks-hand.jpeg", import.meta.url),
     alt: "Image de la page Jack's hand",
     title: "Jack's hand",
+    slug: "Jack-s-hand",
     link: "https://hand-animation-one.vercel.app/",
     page: "/jack's-hand",
     techno: {
@@ -79,7 +83,8 @@ const dataCarousel = [
     id: 5,
     imgUrl: new URL("../../assets/img/screenshot-website/bounce-cube.png", import.meta.url),
     alt: "Image de la page d'accueil de bounce-cube",
-    title: "bounce-cube",
+    title: "Bounce Cube",
+    slug: "bounce-cube",
     link: "https://bounce-cube.vercel.app",
     page: "/bounce-cube",
     techno: {
@@ -95,7 +100,8 @@ const dataCarousel = [
     id: 6,
     imgUrl: new URL("../../assets/img/screenshot-website/wave-cube.png", import.meta.url),
     alt: "Image de la page d'accueil de wave-cube",
-    title: "cube-wave",
+    title: "Cube Wave",
+    slug: "cube-wave",
     link: "https://cube-wave.vercel.app",
     page: "/cube-wave",
     techno: {
@@ -112,7 +118,8 @@ const dataCarousel = [
     id: 7,
     imgUrl: new URL("../../assets/img/screenshot-website/home-large.png", import.meta.url),
     alt: "Image de la page d'accueil de statistiques-covid",
-    title: "statistiques-covid",
+    title: "Statistiques Covid",
+    slug: "statistiques-covid",
     link: "https://www.statistiques-covid.com",
     page: "/statistiques-covid",
     techno: {
@@ -131,7 +138,8 @@ const dataCarousel = [
     id: 8,
     imgUrl: new URL("../../assets/img/screenshot-website/cube-in-cube.png", import.meta.url),
     alt: "Image de la page d'accueil de cube-in-cube",
-    title: "cube-in-cube",
+    title: "Cube In Cube",
+    slug: "cube-in-cube",
     link: "https://cube-in-cube.vercel.app",
     page: "/cube-in-cube",
     techno: {
@@ -148,7 +156,8 @@ const dataCarousel = [
     id: 9,
     imgUrl: new URL("../../assets/img/screenshot-website/visuel-padding-margin.png", import.meta.url),
     alt: "Image de la page d'accueil de visual-padding-margin-css",
-    title: "padding-margin-css",
+    title: "Padding Margin CSS3",
+    slug: "padding-margin-css",
     link: "https://visual-padding-margin-css.vercel.app/",
     page: "/padding-margin-css",
     techno: {
@@ -165,7 +174,8 @@ const dataCarousel = [
     id: 10,
     imgUrl: new URL("../../assets/img/screenshot-website/build-cube-css.png", import.meta.url),
     alt: "Image de la page d'accueil de build-cube-css",
-    title: "build-cube-css",
+    title: "Build Cube CSS",
+    slug: "build-cube-css",
     link: "https://build-cube-css.vercel.app/",
     page: "/build-cube-css",
     techno: {
@@ -182,7 +192,8 @@ const dataCarousel = [
     id: 11,
     imgUrl: new URL("../../assets/img/screenshot-website/cardiac-cohesion.png", import.meta.url),
     alt: "Image de la page d'accueil de cardiac-cohesion",
-    title: "cardiac-cohesion",
+    title: "Cardiac Cohesion",
+    slug: "cardiac-cohesion",
     link: "https://cardiac-cohesion.vercel.app/",
     page: "/cardiac-cohesion",
     techno: {
@@ -199,7 +210,8 @@ const dataCarousel = [
     id: 12,
     imgUrl: new URL("../../assets/img/screenshot-website/trouve-ta-ville.png", import.meta.url),
     alt: "Image de la page d'accueil de trouve-ta-ville",
-    title: "trouve-ta-ville",
+    title: "Trouve Ta Ville",
+    slug: "trouve-ta-ville",
     link: "https://trouve-ta-ville-blond.vercel.app/",
     page: "/trouve-ta-ville",
     techno: {
@@ -217,7 +229,8 @@ const dataCarousel = [
     id: 13,
     imgUrl: new URL("../../assets/img/screenshot-website/puzzle-game.jpeg", import.meta.url),
     alt: "Image de la page d'accueil de puzzle",
-    title: "puzzle-game",
+    title: "Puzzle Game",
+    slug: "puzzle-game",
     link: "https://puzzle-game.vercel.app/",
     page: "/puzzle",
     techno: {
@@ -235,7 +248,8 @@ const dataCarousel = [
     id: 14,
     imgUrl: new URL("../../assets/img/fun-with-flags/home-page.jpg", import.meta.url),
     alt: "Image de la page d'accueil de fun-with-flags-js",
-    title: "fun-with-flags",
+    title: "Fun With Flags",
+    slug: "fun-with-flags",
     link: "https://fun-with-flags-js.vercel.app/",
     page: "/fun-with-flags",
     techno: {
