@@ -3,7 +3,7 @@ import dataCarousel from "../../../assets/data/dataCarousel.js";
 import CarouselDesc from "./Description/index.jsx";
 import './index.scss';
 
-const Carousel = ({currentValue, containerRef, degValue, degreesValue, setDegreesValue, setCurrentValue}) => {
+const Carousel = ({ currentValue, containerRef, degValue, degreesValue }) => {
 
   const faceRef = dataCarousel.map(() => useRef());
   useEffect(() => {
