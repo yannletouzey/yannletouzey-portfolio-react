@@ -7,6 +7,7 @@ const dataCarousel = [
     link: "#",
     page: "/easy-mailing",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
       react: new URL('../../assets/icons/react.svg', import.meta.url),
       node: new URL('../../assets/icons/node.svg', import.meta.url),
       express: new URL('../../assets/icons/express.svg', import.meta.url),
@@ -27,6 +28,7 @@ const dataCarousel = [
     link: "#",
     page: "/easy-time-clock",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
       css: new URL('../../assets/icons/css.svg', import.meta.url),
       js: new URL('../../assets/icons/js.svg', import.meta.url),
       php: new URL('../../assets/icons/php.svg', import.meta.url),
@@ -46,6 +48,7 @@ const dataCarousel = [
     link: "https://portfolio-selim-react.vercel.app/",
     page: "/portfolio-selim",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
       sass: new URL('../../assets/icons/sass.svg', import.meta.url),
       react: new URL('../../assets/icons/react.svg', import.meta.url)
     },
@@ -62,6 +65,8 @@ const dataCarousel = [
     link: "https://hand-animation-one.vercel.app/",
     page: "/jack's-hand",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
+      css: new URL('../../assets/icons/css.svg', import.meta.url),
       three: new URL("../../assets/icons/three.png", import.meta.url),
       js: new URL('../../assets/icons/js.svg', import.meta.url)
     },
@@ -94,6 +99,7 @@ const dataCarousel = [
     link: "https://cube-wave.vercel.app",
     page: "/cube-wave",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
       css: new URL('../../assets/icons/css.svg', import.meta.url),
       js: new URL('../../assets/icons/js.svg', import.meta.url)
     },
@@ -110,6 +116,7 @@ const dataCarousel = [
     link: "https://www.statistiques-covid.com",
     page: "/statistiques-covid",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
       css: new URL('../../assets/icons/css.svg', import.meta.url),
       js: new URL('../../assets/icons/js.svg', import.meta.url),
       php: new URL('../../assets/icons/php.svg', import.meta.url),
@@ -128,6 +135,7 @@ const dataCarousel = [
     link: "https://cube-in-cube.vercel.app",
     page: "/cube-in-cube",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
       css: new URL('../../assets/icons/css.svg', import.meta.url),
       js: new URL('../../assets/icons/js.svg', import.meta.url)
     },
@@ -144,6 +152,7 @@ const dataCarousel = [
     link: "https://visual-padding-margin-css.vercel.app/",
     page: "/padding-margin-css",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
       css: new URL('../../assets/icons/css.svg', import.meta.url),
       js: new URL('../../assets/icons/js.svg', import.meta.url)
     },
@@ -160,6 +169,7 @@ const dataCarousel = [
     link: "https://build-cube-css.vercel.app/",
     page: "/build-cube-css",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
       css: new URL('../../assets/icons/css.svg', import.meta.url),
       js: new URL('../../assets/icons/js.svg', import.meta.url)
     },
@@ -176,6 +186,7 @@ const dataCarousel = [
     link: "https://cardiac-cohesion.vercel.app/",
     page: "/cardiac-cohesion",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
       css: new URL('../../assets/icons/css.svg', import.meta.url),
       js: new URL('../../assets/icons/js.svg', import.meta.url)
     },
@@ -192,6 +203,7 @@ const dataCarousel = [
     link: "https://trouve-ta-ville-blond.vercel.app/",
     page: "/trouve-ta-ville",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
       css: new URL('../../assets/icons/css.svg', import.meta.url),
       js: new URL('../../assets/icons/js.svg', import.meta.url),
       react: new URL('../../assets/icons/react.svg', import.meta.url),
@@ -209,6 +221,7 @@ const dataCarousel = [
     link: "https://puzzle-game.vercel.app/",
     page: "/puzzle",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
       css: new URL('../../assets/icons/css.svg', import.meta.url),
       js: new URL('../../assets/icons/js.svg', import.meta.url)
     },
@@ -226,6 +239,7 @@ const dataCarousel = [
     link: "https://fun-with-flags-js.vercel.app/",
     page: "/fun-with-flags",
     techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
       css: new URL('../../assets/icons/css.svg', import.meta.url),
       js: new URL('../../assets/icons/js.svg', import.meta.url),
       react: new URL('../../assets/icons/react.svg', import.meta.url)
