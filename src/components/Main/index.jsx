@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useRef, useEffect } from "react";
-import Buttons from "./Buttons/index.jsx";
-import Carousel from "./Carousel/index.jsx";
+import MainSmallScreen from "./MainSmallScreen/index.jsx";
+import MainLargeScreen from "./MainLargeScreen/index.jsx";
 import Description from "../Description.jsx";
 import dataCarousel from "../../assets/data/dataCarousel.js";
 import './index.scss';
 
-const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompatible, degValue, degreesValue, setDegreesValue, mousePos }) => {
+const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompatible, degValue, degreesValue, setDegreesValue, mousePos, navigatorIsCompatible }) => {
 
   const nextRef = useRef();
   const prevRef = useRef();
@@ -35,35 +35,15 @@ const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompati
   }, []);
 
 
-  useEffect(() => {
-    backgroundTitleRef.current.style.translate = `${mousePos.x * 10}px ${mousePos.y * 10}px`;
-  }, [mousePos]);
-
-  useEffect(() => {
-    backgroundTitleRef.current.style.scale = '0';
-    backgroundTitleShadowRef.current.style.scale = '0';
-    setTimeout(() => {
-      setBackgroundTitle(dataCarousel[currentValue - 1].title);
-      backgroundTitleRef.current.style.transitionTimingFunction = `cubic-bezier(.2,1.66,.81,.78)`;
-      backgroundTitleRef.current.style.scale = '1 1.4';
-      backgroundTitleShadowRef.current.style.transitionTimingFunction = `cubic-bezier(.2,1.66,.81,.78)`;
-      backgroundTitleShadowRef.current.style.scale = '1 1.4';
-    }, 300)
-  }, [currentValue]);
 
   return (
     <main className="main">
-      <h4 ref={backgroundTitleRef} className="main__title">{backgroundTitle}</h4>
-      <h4 ref={backgroundTitleShadowRef} className="main__title--shadow">{backgroundTitle}</h4>
       <Description />
       <section id="container" className="container">
-      {screenNotCompatible ? (
-        <p className="main__text">Ce site n'est pas compatible avec cette appareil.</p>
+      {screenNotCompatible || !navigatorIsCompatible ? (
+        <MainSmallScreen />
       ) : (
-        <>
-          <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} />
-          <Buttons nextRef={nextRef} prevRef={prevRef} handleClick={handleClick}/>
-        </>
+        <MainLargeScreen nextRef={nextRef} prevRef={prevRef} handleClick={handleClick} containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} backgroundTitle={backgroundTitle} setBackgroundTitle={setBackgroundTitle} backgroundTitleRef={backgroundTitleRef} backgroundTitleShadowRef={backgroundTitleShadowRef} mousePos={mousePos} />
       )}
       </section>
     </main>

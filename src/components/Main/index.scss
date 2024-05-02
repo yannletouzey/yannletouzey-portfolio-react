@@ -28,13 +28,10 @@
       scale: 0;
       transition-duration: 0.3s;
       font-size: 3rem;
-      top: 9rem;
+      top: 1rem;
     }
     @media screen and (min-width: 56rem) {
       font-size: 4rem;
-    }
-    @media screen and (min-width: 63rem) {
-      top: 8rem;
     }
   }
   &__title--shadow {
@@ -57,13 +54,10 @@
       scale: 0;
       transition-duration: 0.3s;
       font-size: 3rem;
-      top: 9rem;
+      top: 1rem;
     }
     @media screen and (min-width: 56rem) {
       font-size: 4rem;
-    }
-    @media screen and (min-width: 63rem) {
-      top: 8rem;
     }
   }
   &__text {

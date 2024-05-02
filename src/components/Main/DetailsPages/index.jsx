@@ -3,11 +3,10 @@ import { useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
 import dataDetailPage from '../../../assets/data/dataDetailPage';
 import './index.scss';
-
 export default function DetailsPage({ descSmall, setTitleCurrent }) {
   const detailPageCurrent = useParams();
   const desc = descSmall.filter((d) => d.page === `/${detailPageCurrent.project}`);
-  const data = dataDetailPage.filter((d) => d.name === `${desc[0].title}`);
+  const data = dataDetailPage.filter((d) => d.name === `${desc[0].slug}`);
   const cardRef = data[0].data.map(() => useRef());
   
   useEffect(() => {

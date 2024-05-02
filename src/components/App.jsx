@@ -1,20 +1,21 @@
 import { Route, Routes } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Header from './Header';
 import Main from './Main'
 import ScreenStart from './ScreenStart/index.jsx'
 import dataCarousel from '../assets/data/dataCarousel.js';
 import DetailsPage from "./Main/DetailsPages/index.jsx";
-
-import Canvas from './Canvas/index.jsx';
 import Footer from './Footer/index.jsx';
 
 const App = () => {
+
+  const rootChildRef = useRef();
 
   const [currentValue, setCurrentValue] = useState(1);
   const [titleCurrent, setTitleCurrent] = useState("");
   const [screenWidthIsMobile, setScreenWidthIsMobile] = useState(window.innerWidth <= 800);
   const [agentUserIsMobile, setAgentUserIsMobile] = useState(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+  const [navigatorIsCompatible, setNavigatorIsCompatible] = useState(false);
   const [screenNotCompatible, setScreenNotCompatible] = useState(screenWidthIsMobile || agentUserIsMobile);
 
   const degValue = 90;
@@ -24,6 +25,23 @@ const App = () => {
   const handleMouseMove = (e) => {
     setMousePos({ x: e.clientX / window.innerWidth - 0.5, y: e.clientY / window.innerHeight - 0.5 });
   }
+  function isSafari() {
+    const userAgent = navigator.userAgent;
+    const isChrome = userAgent.indexOf('Chrome') > -1;
+    const isSafari = userAgent.indexOf('Safari') > -1;
+    return isSafari && !isChrome;
+  }
+
+  useEffect(() => {
+    if (isSafari()) {
+      setNavigatorIsCompatible(false)
+    } else {
+      setNavigatorIsCompatible(true)
+    }
+    setTimeout(() => {
+      // rootChildRef.current.style.overflow = 'none';
+    }, 1000)
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -31,7 +49,7 @@ const App = () => {
       setAgentUserIsMobile(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
       setScreenNotCompatible(screenWidthIsMobile || agentUserIsMobile);
     };
-
+    
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -47,11 +65,11 @@ const App = () => {
   }, [titleCurrent]);
 
   return (
-    <div onMouseMove={handleMouseMove}>
+    <div onMouseMove={handleMouseMove} className="root__child" ref={rootChildRef}>
       <ScreenStart />
       <Header />
       <Routes>
-        <Route path="/" element={<Main setTitleCurrent={setTitleCurrent} degValue={degValue} currentValue={currentValue} setCurrentValue={setCurrentValue} screenNotCompatible={screenNotCompatible} degreesValue={degreesValue} setDegreesValue={setDegreesValue} mousePos={mousePos} />} />
+        <Route path="/" element={<Main setTitleCurrent={setTitleCurrent} degValue={degValue} currentValue={currentValue} setCurrentValue={setCurrentValue} screenNotCompatible={screenNotCompatible} degreesValue={degreesValue} setDegreesValue={setDegreesValue} mousePos={mousePos} navigatorIsCompatible={navigatorIsCompatible} />} />
         <Route path='/:project' element={<DetailsPage setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
       </Routes>
       <Footer />  
