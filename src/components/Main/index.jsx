@@ -40,7 +40,7 @@ const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompati
     <main className="main">
       <Description />
       {screenNotCompatible || !navigatorIsCompatible ? (
-        <MainSmallScreen dataCarousel={dataCarousel} />
+        <MainSmallScreen />
       ) : (
         <MainLargeScreen nextRef={nextRef} prevRef={prevRef} handleClick={handleClick} containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} backgroundTitle={backgroundTitle} setBackgroundTitle={setBackgroundTitle} backgroundTitleRef={backgroundTitleRef} backgroundTitleShadowRef={backgroundTitleShadowRef} mousePos={mousePos} />
       )}
