@@ -39,13 +39,11 @@ const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompati
   return (
     <main className="main">
       <Description />
-      <section id="container" className="container">
       {screenNotCompatible || !navigatorIsCompatible ? (
-        <MainSmallScreen />
+        <MainSmallScreen dataCarousel={dataCarousel} />
       ) : (
         <MainLargeScreen nextRef={nextRef} prevRef={prevRef} handleClick={handleClick} containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} backgroundTitle={backgroundTitle} setBackgroundTitle={setBackgroundTitle} backgroundTitleRef={backgroundTitleRef} backgroundTitleShadowRef={backgroundTitleShadowRef} mousePos={mousePos} />
       )}
-      </section>
     </main>
   )
 }

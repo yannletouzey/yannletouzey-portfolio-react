@@ -1,9 +1,12 @@
 import React from 'react'
-
-export default function MainSmallScreen() {
+import './index.scss';
+export default function MainSmallScreen({ dataCarousel}) {
+  console.log(dataCarousel);
   return (
     <>
-      <p className="main__text">Ce site n'est pas compatible avec cette appareil<br/><br/>Incompatible Safari</p>
+      <section id="container" className="container">
+        <p className="main__text">Ce site n'est pas compatible avec cette appareil<br/><br/>Incompatible Safari</p>
+      </section>
     </>
   )
 }

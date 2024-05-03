@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Carousel from '../Carousel'
 import Buttons from '../Buttons'
 import dataCarousel from "../../../assets/data/dataCarousel.js";
-
+import './index.scss';
 export default function MainSmallScreen({ containerRef, degValue, degreesValue, currentValue, handleClick, nextRef, prevRef, mousePos, backgroundTitleRef, backgroundTitleShadowRef, backgroundTitle, setBackgroundTitle }) {
 
   useEffect(() => {
@@ -23,10 +23,12 @@ export default function MainSmallScreen({ containerRef, degValue, degreesValue, 
 
   return (
     <>
-      <h4 ref={backgroundTitleRef} className="main__title">{backgroundTitle}</h4>
-      <h4 ref={backgroundTitleShadowRef} className="main__title--shadow">{backgroundTitle}</h4>
-      <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} />
-      <Buttons nextRef={nextRef} prevRef={prevRef} handleClick={handleClick}/>
+      <section id="container" className="container" style={{height: "30rem"}}>
+        <h4 ref={backgroundTitleRef} className="main__title">{backgroundTitle}</h4>
+        <h4 ref={backgroundTitleShadowRef} className="main__title--shadow">{backgroundTitle}</h4>
+        <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} />
+        <Buttons nextRef={nextRef} prevRef={prevRef} handleClick={handleClick}/>
+      </section>
     </>
   )
 }
