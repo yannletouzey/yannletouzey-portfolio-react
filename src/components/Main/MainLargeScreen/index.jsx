@@ -23,7 +23,7 @@ export default function MainSmallScreen({ containerRef, degValue, degreesValue, 
 
   return (
     <>
-      <section id="container" className="container" style={{height: "30rem"}}>
+      <section id="container" className="container">
         <h4 ref={backgroundTitleRef} className="main__title">{backgroundTitle}</h4>
         <h4 ref={backgroundTitleShadowRef} className="main__title--shadow">{backgroundTitle}</h4>
         <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} />
