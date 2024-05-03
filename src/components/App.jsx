@@ -6,6 +6,7 @@ import ScreenStart from './ScreenStart/index.jsx'
 import dataCarousel from '../assets/data/dataCarousel.js';
 import DetailsPage from "./Main/DetailsPages/index.jsx";
 import Footer from './Footer/index.jsx';
+import About from './Main/About/index.jsx';
 
 const App = () => {
 
@@ -71,6 +72,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Main setTitleCurrent={setTitleCurrent} degValue={degValue} currentValue={currentValue} setCurrentValue={setCurrentValue} screenNotCompatible={screenNotCompatible} degreesValue={degreesValue} setDegreesValue={setDegreesValue} mousePos={mousePos} navigatorIsCompatible={navigatorIsCompatible} />} />
         <Route path='/:project' element={<DetailsPage setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
+        <Route path="/about" element={<About setTitleCurrent={setTitleCurrent} />} />
       </Routes>
       <Footer />  
     </div>

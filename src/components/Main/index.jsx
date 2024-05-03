@@ -38,7 +38,7 @@ const Main = ({ setTitleCurrent, currentValue, setCurrentValue, screenNotCompati
 
   return (
     <main className="main">
-      <Description />
+      {/* <Description /> */}
       {screenNotCompatible || !navigatorIsCompatible ? (
         <MainSmallScreen />
       ) : (
