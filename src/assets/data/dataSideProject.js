@@ -1,4 +1,4 @@
-const dataCarousel = [
+const dataDetailPage = [
   {
     id: 1,
     imgUrl: new URL("../../assets/img/screenshot-website/easy-mailing/accueil.png", import.meta.url),
@@ -266,4 +266,4 @@ const dataCarousel = [
     seriousProject: false
   }
 ]
-export default dataCarousel;
+export default dataDetailPage;

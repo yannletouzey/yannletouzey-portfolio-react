@@ -62,6 +62,7 @@ const App = () => {
     document.title = titleCurrent;
     if (location.pathname !== '/') {
       setCurrentValue(1);
+      setDegreesValue(0);
     }
   }, [titleCurrent]);
 

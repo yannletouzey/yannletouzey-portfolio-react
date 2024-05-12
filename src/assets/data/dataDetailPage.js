@@ -4,7 +4,7 @@ const dataDetailPage = [
     data: [
       {
         img: new URL('../../assets/img/screenshot-website/circle-portfolio.jpeg', import.meta.url),
-        desc: 'Page d\'acceuil du portfolio regroupant toutes les photos. Dans ce projet les photos proviennet du site https://picsum.photos'
+        desc: 'Page d\'acceuil du portfolio regroupant toutes les photos. Dans ce projet les photos proviennent du site https://picsum.photos'
       }
     ]
   },
@@ -67,6 +67,36 @@ const dataDetailPage = [
       {
         img: new URL('../../assets/img/easy-time-clock/new-admin.jpeg', import.meta.url),
         desc: "Cette page permet d'ajouter un nouvel administrateur. Elle ne sera accessible seulement par un super administrateur."
+      }
+    ]
+  },
+  {
+    name: 'selim-dm-portfolio',
+    data: [
+      {
+        img: new URL('../../assets/img/screenshot-website/home-selim-folio.jpg', import.meta.url),
+        desc: "Page d'accueil du portfolio de selim-dm avec son travail personnel."
+      },
+      {
+        img: new URL('../../assets/img/screenshot-website/selim-work-page.png', import.meta.url),
+        desc: "Page du menu des principaux travaux ."
+      },
+      {
+        img: new URL('../../assets/img/screenshot-website/selim-punch.jpg', import.meta.url),
+        desc: "Page du client Punch Agency Paris."
+      },
+      {
+        img: new URL('../../assets/img/screenshot-website/selim-centro.jpg', import.meta.url),
+        desc: "Page du client Centro."
+      }
+    ]
+  },
+  {
+    name: 'side-projects',
+    data: [
+      {
+        img: new URL('../../assets/img/screenshot-website/cardiac-cohesion.png', import.meta.url),
+        desc: "Page d'accueil de cardiac-cohesion"
       }
     ]
   }
