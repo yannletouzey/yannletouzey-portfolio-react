@@ -52,6 +52,7 @@ const dataCarousel = [
     page: "/portfolio-selim",
     techno: {
       html: new URL('../../assets/icons/html.svg', import.meta.url),
+      css: new URL('../../assets/icons/css.svg', import.meta.url),
       sass: new URL('../../assets/icons/sass.svg', import.meta.url),
       react: new URL('../../assets/icons/react.svg', import.meta.url)
     },
