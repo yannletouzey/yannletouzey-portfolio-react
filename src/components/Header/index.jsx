@@ -53,12 +53,12 @@ const Header = () => {
           logo={githubLogo} 
           alt="Logo GutHub"
         />
-        <CubeContact 
+        {/* <CubeContact 
           id="cube-three" 
           link="https://twitter.com/home" 
           logo={twitterLogo} 
           alt="Logo Twitter"
-        />
+        /> */}
       </menu>
     </header>
   )

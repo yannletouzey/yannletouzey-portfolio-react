@@ -52,7 +52,7 @@
     &.is-opened {
         transform-origin: center;
         transition-duration: var.$duration-animation-button-header;
-        transform: translateX(- calc(var.$sizes-cube * 6)) rotate(180deg);
+        transform: translateX(- calc(var.$sizes-cube * 4.5)) rotate(180deg);
         span{
             transform-origin: center;
             transition-duration: var.$duration-animation-button-header;
