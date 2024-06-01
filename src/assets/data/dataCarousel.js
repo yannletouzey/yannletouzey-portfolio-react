@@ -264,6 +264,25 @@ const dataCarousel = [
     descSmall: "",
     descFull: "Pas encore de description",
     seriousProject: false
+  },
+  {
+    id: 14,
+    imgUrl: new URL("../../assets/img/screenshot-website/flexbox.jpeg", import.meta.url),
+    alt: "Image de la page d'accueil de Visual Flexbox",
+    title: "Visual Flexbox",
+    slug: "visual-flexbox",
+    link: "https://visual-flexbox.vercel.app/",
+    page: "/visual-flexbox",
+    techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
+      css: new URL('../../assets/icons/css.svg', import.meta.url),
+      js: new URL('../../assets/icons/js.svg', import.meta.url)
+    },
+    stack: "front-end",
+    inline: true,
+    descSmall: "",
+    descFull: "Pas encore de description",
+    seriousProject: false
   }
 ]
 export default dataCarousel;
