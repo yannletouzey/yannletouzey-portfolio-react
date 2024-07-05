@@ -284,6 +284,104 @@ const dataCarousel = [
     descSmall: "",
     descFull: "Pas encore de description",
     seriousProject: false
+  },
+  {
+    id: 15,
+    imgUrl: new URL("../../assets/img/screenshot-website/3d-car.png", import.meta.url),
+    alt: "Image de la page d'accueil de 3d-car",
+    title: "3d car threejs",
+    slug: "3d-car",
+    link: "https://visual-flexbox.vercel.app/",
+    page: "/visual-flexbox",
+    techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
+      css: new URL('../../assets/icons/css.svg', import.meta.url),
+      js: new URL('../../assets/icons/js.svg', import.meta.url),
+      three: new URL("../../assets/icons/three.png", import.meta.url)
+    },
+    stack: "front-end",
+    inline: true,
+    descSmall: "",
+    descFull: "Pas encore de description",
+    seriousProject: false
+  },
+  {
+    id: 16,
+    imgUrl: new URL("../../assets/img/screenshot-website/ascii-cam.png", import.meta.url),
+    alt: "Image de la page d'accueil de ascii-cam",
+    title: "ascii cam",
+    slug: "ascii-cam",
+    link: "https://ascii-cam.vercel.app/",
+    page: "/ascii-cam",
+    techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
+      css: new URL('../../assets/icons/css.svg', import.meta.url),
+      js: new URL('../../assets/icons/js.svg', import.meta.url)
+    },
+    stack: "front-end",
+    inline: true,
+    descSmall: "",
+    descFull: "Pas encore de description",
+    seriousProject: false
+  },
+  {
+    id: 17,
+    imgUrl: new URL("../../assets/img/screenshot-website/3d-clock.png", import.meta.url),
+    alt: "Image de la page d'accueil de 3d-clock",
+    title: "3d clock",
+    slug: "3d-clock",
+    link: "https://3d-clock-beta.vercel.app",
+    page: "/3d-clock-beta",
+    techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
+      css: new URL('../../assets/icons/css.svg', import.meta.url),
+      js: new URL('../../assets/icons/js.svg', import.meta.url),
+      three: new URL("../../assets/icons/three.png", import.meta.url)
+    },
+    stack: "front-end",
+    inline: true,
+    descSmall: "",
+    descFull: "Pas encore de description",
+    seriousProject: false
+  },
+  {
+    id: 18,
+    imgUrl: new URL("../../assets/img/screenshot-website/3d-game.png", import.meta.url),
+    alt: "Image de la page d'accueil de 3d-game",
+    title: "3d game",
+    slug: "3d-game",
+    link: "https://threejs-game-tawny.vercel.app/",
+    page: "/3d-game-beta",
+    techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
+      css: new URL('../../assets/icons/css.svg', import.meta.url),
+      js: new URL('../../assets/icons/js.svg', import.meta.url),
+      three: new URL("../../assets/icons/three.png", import.meta.url)
+    },
+    stack: "front-end",
+    inline: true,
+    descSmall: "",
+    descFull: "Pas encore de description",
+    seriousProject: false
+  },
+  {
+    id: 19,
+    imgUrl: new URL("../../assets/img/screenshot-website/3d-btn.png", import.meta.url),
+    alt: "Image de la page d'accueil de 3d-btn",
+    title: "3d btn",
+    slug: "3d-btn",
+    link: "https://btn-animation-ten.vercel.app/",
+    page: "/3d-button",
+    techno: {
+      html: new URL('../../assets/icons/html.svg', import.meta.url),
+      css: new URL('../../assets/icons/css.svg', import.meta.url),
+      js: new URL('../../assets/icons/js.svg', import.meta.url)
+    },
+    stack: "front-end",
+    inline: true,
+    descSmall: "",
+    descFull: "Pas encore de description",
+    seriousProject: false
   }
 ]
 export default dataCarousel;
