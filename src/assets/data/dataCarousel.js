@@ -101,24 +101,6 @@ const dataCarousel = [
   },
   {
     id: 6,
-    imgUrl: new URL("../../assets/img/screenshot-website/visuel-padding-margin.png", import.meta.url),
-    alt: "Image de la page d'accueil de visual-padding-margin-css",
-    title: "Padding Margin CSS3",
-    slug: "padding-margin-css",
-    link: "https://visual-padding-margin-css.vercel.app/",
-    page: "/padding-margin-css",
-    techno: {
-      html: new URL('../../assets/icons/html.svg', import.meta.url),
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    desc: "Pas encore de description",
-    seriousProject: true
-  },
-  {
-    id: 7,
     imgUrl: new URL("../../assets/img/screenshot-website/jacks-hand.jpeg", import.meta.url),
     alt: "Image de la page Jack's hand",
     title: "Jack's hand",
@@ -137,61 +119,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 8,
-    imgUrl: new URL("../../assets/img/screenshot-website/wave-cube.png", import.meta.url),
-    alt: "Image de la page d'accueil de wave-cube",
-    title: "Cube Wave",
-    slug: "cube-wave",
-    link: "https://cube-wave.vercel.app",
-    page: "/cube-wave",
-    techno: {
-      html: new URL('../../assets/icons/html.svg', import.meta.url),
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    desc: "Petite animation de plusieurs cubes créé en CSS3 et HTML5 et JavaScript. En utilisant les keyframes CSS3.",
-    seriousProject: true
-  },
-  {
-    id: 9,
-    imgUrl: new URL("../../assets/img/screenshot-website/cube-in-cube.png", import.meta.url),
-    alt: "Image de la page d'accueil de cube-in-cube",
-    title: "Cube In Cube",
-    slug: "cube-in-cube",
-    link: "https://cube-in-cube.vercel.app",
-    page: "/cube-in-cube",
-    techno: {
-      html: new URL('../../assets/icons/html.svg', import.meta.url),
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    desc: "Pas encore de description",
-    seriousProject: true
-  },
-  {
-    id: 10,
-    imgUrl: new URL("../../assets/img/screenshot-website/build-cube-css.png", import.meta.url),
-    alt: "Image de la page d'accueil de build-cube-css",
-    title: "Build Cube CSS",
-    slug: "build-cube-css",
-    link: "https://build-cube-css.vercel.app/",
-    page: "/build-cube-css",
-    techno: {
-      html: new URL('../../assets/icons/html.svg', import.meta.url),
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    desc: "Petite animation d'un cube créé en CSS3, HTML5 et JavaScript, en utilisant les keyframes CSS. Ce projet existe pour montrer la possibilité de créer un cube 3D avec des propriétés CSS.",
-    seriousProject: true
-  },
-  {
-    id: 11,
+    id: 7,
     imgUrl: new URL("../../assets/img/screenshot-website/cardiac-cohesion.png", import.meta.url),
     alt: "Image de la page d'accueil de cardiac-cohesion",
     title: "Cardiac Cohesion",
@@ -209,26 +137,7 @@ const dataCarousel = [
     seriousProject: true
   },
   {
-    id: 12,
-    imgUrl: new URL("../../assets/img/screenshot-website/trouve-ta-ville.png", import.meta.url),
-    alt: "Image de la page d'accueil de trouve-ta-ville",
-    title: "Trouve Ta Ville",
-    slug: "trouve-ta-ville",
-    link: "https://trouve-ta-ville-blond.vercel.app/",
-    page: "/trouve-ta-ville",
-    techno: {
-      html: new URL('../../assets/icons/html.svg', import.meta.url),
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url),
-      react: new URL('../../assets/icons/react.svg', import.meta.url),
-    },
-    stack: "front-end",
-    inline: true,
-    desc: "Petit project réalisé pendant la formation Oclock pour mettre en pratique les notions de REACT du jour.",
-    seriousProject: true
-  },
-  {
-    id: 13,
+    id: 8,
     imgUrl: new URL("../../assets/img/screenshot-website/puzzle-game.jpeg", import.meta.url),
     alt: "Image de la page d'accueil de puzzle",
     title: "Puzzle Game",
@@ -245,143 +154,6 @@ const dataCarousel = [
     descSmall: "",
     descFull: "Pas encore de description",
     seriousProject: true
-  },
-  {
-    id: 14,
-    imgUrl: new URL("../../assets/img/fun-with-flags/home-page.jpg", import.meta.url),
-    alt: "Image de la page d'accueil de fun-with-flags-js",
-    title: "Fun With Flags",
-    slug: "fun-with-flags",
-    link: "https://fun-with-flags-js.vercel.app/",
-    page: "/fun-with-flags",
-    techno: {
-      html: new URL('../../assets/icons/html.svg', import.meta.url),
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url),
-      react: new URL('../../assets/icons/react.svg', import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    descSmall: "",
-    descFull: "Pas encore de description",
-    seriousProject: false
-  },
-  {
-    id: 14,
-    imgUrl: new URL("../../assets/img/screenshot-website/flexbox.jpeg", import.meta.url),
-    alt: "Image de la page d'accueil de Visual Flexbox",
-    title: "Visual Flexbox",
-    slug: "visual-flexbox",
-    link: "https://visual-flexbox.vercel.app/",
-    page: "/visual-flexbox",
-    techno: {
-      html: new URL('../../assets/icons/html.svg', import.meta.url),
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    descSmall: "",
-    descFull: "Pas encore de description",
-    seriousProject: false
-  },
-  {
-    id: 15,
-    imgUrl: new URL("../../assets/img/screenshot-website/3d-car.png", import.meta.url),
-    alt: "Image de la page d'accueil de 3d-car",
-    title: "3d car threejs",
-    slug: "3d-car",
-    link: "https://visual-flexbox.vercel.app/",
-    page: "/visual-flexbox",
-    techno: {
-      html: new URL('../../assets/icons/html.svg', import.meta.url),
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url),
-      three: new URL("../../assets/icons/three.png", import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    descSmall: "",
-    descFull: "Pas encore de description",
-    seriousProject: false
-  },
-  {
-    id: 16,
-    imgUrl: new URL("../../assets/img/screenshot-website/ascii-cam.png", import.meta.url),
-    alt: "Image de la page d'accueil de ascii-cam",
-    title: "ascii cam",
-    slug: "ascii-cam",
-    link: "https://ascii-cam.vercel.app/",
-    page: "/ascii-cam",
-    techno: {
-      html: new URL('../../assets/icons/html.svg', import.meta.url),
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    descSmall: "",
-    descFull: "Pas encore de description",
-    seriousProject: false
-  },
-  {
-    id: 17,
-    imgUrl: new URL("../../assets/img/screenshot-website/3d-clock.png", import.meta.url),
-    alt: "Image de la page d'accueil de 3d-clock",
-    title: "3d clock",
-    slug: "3d-clock",
-    link: "https://3d-clock-beta.vercel.app",
-    page: "/3d-clock-beta",
-    techno: {
-      html: new URL('../../assets/icons/html.svg', import.meta.url),
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url),
-      three: new URL("../../assets/icons/three.png", import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    descSmall: "",
-    descFull: "Pas encore de description",
-    seriousProject: false
-  },
-  {
-    id: 18,
-    imgUrl: new URL("../../assets/img/screenshot-website/3d-game.png", import.meta.url),
-    alt: "Image de la page d'accueil de 3d-game",
-    title: "3d game",
-    slug: "3d-game",
-    link: "https://threejs-game-tawny.vercel.app/",
-    page: "/3d-game-beta",
-    techno: {
-      html: new URL('../../assets/icons/html.svg', import.meta.url),
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url),
-      three: new URL("../../assets/icons/three.png", import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    descSmall: "",
-    descFull: "Pas encore de description",
-    seriousProject: false
-  },
-  {
-    id: 19,
-    imgUrl: new URL("../../assets/img/screenshot-website/3d-btn.png", import.meta.url),
-    alt: "Image de la page d'accueil de 3d-btn",
-    title: "3d btn",
-    slug: "3d-btn",
-    link: "https://btn-animation-ten.vercel.app/",
-    page: "/3d-button",
-    techno: {
-      html: new URL('../../assets/icons/html.svg', import.meta.url),
-      css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url)
-    },
-    stack: "front-end",
-    inline: true,
-    descSmall: "",
-    descFull: "Pas encore de description",
-    seriousProject: false
   }
 ]
 export default dataCarousel;

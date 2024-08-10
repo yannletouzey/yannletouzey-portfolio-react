@@ -1,0 +1,10 @@
+@use '../../../scss/var';
+.container__projects {
+  width: 90%;
+  li {
+    margin: 1rem;
+    a {
+      color: var.$color;
+    }
+  }
+}

@@ -4,14 +4,13 @@
   // margin-top: auto;
   height: 3rem;
   width: 100%;
-  color: var.$color;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  &__contact {
+  a {
+    color: var.$color;
     position: relative;
     text-decoration: none;
-    color: var.$color;
     display: flex;
     height: 80%;
     align-items: center;
