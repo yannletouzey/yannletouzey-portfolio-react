@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import MainSmallScreen from "./MainSmallScreen/index.jsx";
 import MainLargeScreen from "./MainLargeScreen/index.jsx";
-import Description from "../Description.jsx";
+// import Description from "../Description.jsx";
 import dataCarousel from "../../assets/data/dataCarousel.js";
 import './index.scss';
 
