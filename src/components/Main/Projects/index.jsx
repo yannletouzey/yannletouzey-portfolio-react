@@ -10,34 +10,34 @@ export default function Projects({ setTitleCurrent }) {
     <section id="container" className="container">
       <ul className="container__projects" style={{ listStyle: 'none', width: '100%'}}>
         <li className='container__project'>
-          <a href="https://visual-padding-margin-css.vercel.app/" target="_blank" rel="noopener noreferrer">visual-padding-margin-css</a>
+          <a href="https://visual-padding-margin-css.vercel.app/" target="_blank" rel="noopener noreferrer">visual padding margin-css</a>
         </li>
         <li className='container__project'>
-          <a href="https://cube-wave.vercel.app" target="_blank" rel="noopener noreferrer">cube-wave</a>
+          <a href="https://cube-wave.vercel.app" target="_blank" rel="noopener noreferrer">cube wave</a>
         </li>
         <li className='container__project'>
-          <a href="https://cube-in-cube.vercel.app" target="_blank" rel="noopener noreferrer">cube-in-cube</a>
+          <a href="https://cube-in-cube.vercel.app" target="_blank" rel="noopener noreferrer">cube in cube</a>
         </li>
         <li className='container__project'>
-          <a href="https://build-cube-css.vercel.app" target="_blank" rel="noopener noreferrer">build-cube-css</a>
+          <a href="https://build-cube-css.vercel.app" target="_blank" rel="noopener noreferrer">build cube css</a>
         </li>
         <li className='container__project'>
-          <a href="https://trouve-ta-ville-blond.vercel.app/" target="_blank" rel="noopener noreferrer">trouve-ta-ville</a>
+          <a href="https://trouve-ta-ville-blond.vercel.app/" target="_blank" rel="noopener noreferrer">trouve ta ville</a>
         </li>
         <li className='container__project'>
-          <a href="https://fun-with-flags-js.vercel.app/" target="_blank" rel="noopener noreferrer">fun-with-flags</a>
+          <a href="https://fun-with-flags-js.vercel.app/" target="_blank" rel="noopener noreferrer">fun with flags</a>
         </li>
         <li className='container__project'>
-          <a href="https://visual-flexbox.vercel.app" target="_blank" rel="noopener noreferrer">visual-flexbox</a>
+          <a href="https://visual-flexbox.vercel.app" target="_blank" rel="noopener noreferrer">visual flexbox css</a>
         </li>
         <li className='container__project'>
-          <a href="https://visual-flexbox.vercel.app/" target="_blank" rel="noopener noreferrer">3d-car</a>
+          <a href="https://car-3d-ruby.vercel.app" target="_blank" rel="noopener noreferrer">3d car</a>
         </li>
         <li className='container__project'>
-          <a href="https://3d-clock-beta.vercel.app" target="_blank" rel="noopener noreferrer">3d-clock</a>
+          <a href="https://3d-clock-beta.vercel.app" target="_blank" rel="noopener noreferrer">3d clock</a>
         </li>
         <li className='container__project'>
-          <a href="https://btn-animation-ten.vercel.app/" target="_blank" rel="noopener noreferrer">3d-button</a>
+          <a href="https://btn-animation-ten.vercel.app/" target="_blank" rel="noopener noreferrer">3d button</a>
         </li>
       </ul>
     </section>
