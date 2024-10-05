@@ -39,6 +39,9 @@ export default function Projects({ setTitleCurrent }) {
         <li className='container__project'>
           <a href="https://btn-animation-ten.vercel.app/" target="_blank" rel="noopener noreferrer">3d button</a>
         </li>
+        <li className='container__project'>
+          <a href="https://balls-animating-3d.vercel.app//" target="_blank" rel="noopener noreferrer">3d balls animation</a>
+        </li>
       </ul>
     </section>
   )
