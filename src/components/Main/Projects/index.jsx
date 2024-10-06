@@ -1,47 +1,34 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './index.scss';
+
 export default function Projects({ setTitleCurrent }) {
+  const [data, setData] = useState([]);
+  const getData = async() => {
+    const res = await fetch('https://apidata-one.vercel.app/api/data');
+    const data = await res.json();
+    data.forEach((project) => {
+      
+      if (project.typeProject !== 'serious') {        
+        setData((data) => [...data, project]);
+      }
+    })
+  }
 
   useEffect(() => {
     setTitleCurrent("Projets divers");
+    getData();
   }, []);
 
   return (
     <section id="container" className="container">
       <ul className="container__projects" style={{ listStyle: 'none', width: '100%'}}>
-        <li className='container__project'>
-          <a href="https://visual-padding-margin-css.vercel.app/" target="_blank" rel="noopener noreferrer">visual padding margin-css</a>
-        </li>
-        <li className='container__project'>
-          <a href="https://cube-wave.vercel.app" target="_blank" rel="noopener noreferrer">cube wave</a>
-        </li>
-        <li className='container__project'>
-          <a href="https://cube-in-cube.vercel.app" target="_blank" rel="noopener noreferrer">cube in cube</a>
-        </li>
-        <li className='container__project'>
-          <a href="https://build-cube-css.vercel.app" target="_blank" rel="noopener noreferrer">build cube css</a>
-        </li>
-        <li className='container__project'>
-          <a href="https://trouve-ta-ville-blond.vercel.app/" target="_blank" rel="noopener noreferrer">trouve ta ville</a>
-        </li>
-        <li className='container__project'>
-          <a href="https://fun-with-flags-js.vercel.app/" target="_blank" rel="noopener noreferrer">fun with flags</a>
-        </li>
-        <li className='container__project'>
-          <a href="https://visual-flexbox.vercel.app" target="_blank" rel="noopener noreferrer">visual flexbox css</a>
-        </li>
-        <li className='container__project'>
-          <a href="https://car-3d-ruby.vercel.app" target="_blank" rel="noopener noreferrer">3d car</a>
-        </li>
-        <li className='container__project'>
-          <a href="https://3d-clock-beta.vercel.app" target="_blank" rel="noopener noreferrer">3d clock</a>
-        </li>
-        <li className='container__project'>
-          <a href="https://btn-animation-ten.vercel.app/" target="_blank" rel="noopener noreferrer">3d button</a>
-        </li>
-        <li className='container__project'>
-          <a href="https://balls-animating-3d.vercel.app//" target="_blank" rel="noopener noreferrer">3d balls animation</a>
-        </li>
+        {data.map((dataElement, index) => {
+          return (
+            <li className='container__project' key={index}>
+              <a href={dataElement.link} target="_blank" rel="noopener noreferrer">{dataElement.link}</a>
+            </li>
+          )
+        })}
       </ul>
     </section>
   )

@@ -4,15 +4,8 @@ import CarouselDesc from "./Description/index.jsx";
 import './index.scss';
 
 const Carousel = ({ currentValue, containerRef, degValue, degreesValue }) => {
-  // const [data, setData] = useState([]);
-  // const [facesRef, setFacesRef] = useState([]);
-  useEffect(() => {
-    // fetch('https://apidata-one.vercel.app/api/data')
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     setData(data)
-    //   })
 
+  useEffect(() => {
     const offsetFace = (containerRef.current.clientWidth / 2);
     faceRef.forEach((faceElement, index) => {
       faceElement.current.style.transform = `rotateY(${degValue * index}deg) translateZ(${offsetFace}px)`;
