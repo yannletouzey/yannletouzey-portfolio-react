@@ -2,8 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import dataCarousel from "../../../assets/data/dataCarousel.js";
 import CarouselDesc from "./Description/index.jsx";
 import './index.scss';
+import { useStore } from "../../../../store.js";
 
 const Carousel = ({ currentValue, containerRef, degValue, degreesValue }) => {
+
+  const { setCurrentValue } = useStore();
 
   useEffect(() => {
     const offsetFace = (containerRef.current.clientWidth / 2);
@@ -19,6 +22,7 @@ const Carousel = ({ currentValue, containerRef, degValue, degreesValue }) => {
     dataCarousel.forEach((f, index) => {
       if (dataCarousel[index].id == currentValue) {
         faceRef.forEach(faceElement => {
+          setCurrentValue(currentValue)
           if (currentValue == 1) {
             if (faceElement.current.id >= (currentValue + 4)) {
               faceElement.current.style.display = 'none'
@@ -35,6 +39,7 @@ const Carousel = ({ currentValue, containerRef, degValue, degreesValue }) => {
         })
       }
     })
+    
   }, [degreesValue])
   
   const imgRef = useRef();
