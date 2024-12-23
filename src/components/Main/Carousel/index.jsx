@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import dataCarousel from "../../../assets/data/dataCarousel.js";
+import { useStore } from "../../../../store.js";
 import CarouselDesc from "./Description/index.jsx";
 import './index.scss';
-import { useStore } from "../../../../store.js";
 
 const Carousel = ({ currentValue, containerRef, degValue, degreesValue }) => {
 
-  const { setCurrentValue } = useStore();
+  const { data, dataCarousel, setCurrentValue } = useStore();
+  
+  const faceRef = dataCarousel.map(() => useRef());
+  const imgRef = useRef();
 
   useEffect(() => {
     const offsetFace = (containerRef.current.clientWidth / 2);
@@ -14,8 +16,6 @@ const Carousel = ({ currentValue, containerRef, degValue, degreesValue }) => {
       faceElement.current.style.transform = `rotateY(${degValue * index}deg) translateZ(${offsetFace}px)`;
     })
   }, []);
-
-  const faceRef = dataCarousel.map(() => useRef());
 
   useEffect(() => {
     containerRef.current.style.transform = `rotateY(${degreesValue}deg)`;
@@ -42,8 +42,6 @@ const Carousel = ({ currentValue, containerRef, degValue, degreesValue }) => {
     
   }, [degreesValue])
   
-  const imgRef = useRef();
-
   const handleMouseEnter = (e) => {
     const boxImg = e.currentTarget;
     const img = boxImg.children[0];

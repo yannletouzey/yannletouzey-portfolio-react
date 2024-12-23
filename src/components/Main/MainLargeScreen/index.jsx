@@ -13,7 +13,7 @@ export default function MainSmallScreen({ containerRef, degValue, degreesValue, 
     backgroundTitleRef.current.style.scale = '0';
     backgroundTitleShadowRef.current.style.scale = '0';
     setTimeout(() => {
-      setBackgroundTitle(dataCarousel[currentValue - 1].title);
+      setBackgroundTitle(dataCarousel[currentValue - 1].category);
       backgroundTitleRef.current.style.transitionTimingFunction = `cubic-bezier(.2,1.66,.81,.78)`;
       backgroundTitleRef.current.style.scale = '1 1.4';
       backgroundTitleShadowRef.current.style.transitionTimingFunction = `cubic-bezier(.2,1.66,.81,.78)`;

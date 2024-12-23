@@ -2,107 +2,106 @@
 @use '../../scss/font';
 
 .header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: hidden;
+  min-height: 3.5rem;
+  @media screen and (min-width: 39rem) {
+    padding: 1rem 0 0 3rem;
+  }
+  &__title {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow-x: hidden;
-    min-height: 3.5rem;
+    font-family: 'Spongeboy';
+    -webkit-text-stroke: 0.5px var.$color;
+    color: var.$background-color;
+    font-size: 1.6rem;
+    padding: 1rem 0 0.5rem 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    &--lastname,
+    &--firstname {
+      text-shadow: 1px 1px 0 var.$color;
+      padding-top: 0.5rem;
+      display: inline-block;
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
+    &--lastname {
+      transition: width 0.2s;
+      width: 9.5rem;
+    }
+    &--firstname {
+      border-radius: 0 0 1rem 0;
+      transition: width 0.2s;
+      width: 5.5rem;
+      margin-right: 0.5rem;
+    }
+    .lastnameHide {
+      text-shadow: 0px 0px 0 var.$color;
+      width: 0.84rem;
+    }
+    .lastnameShow {
+      width: 9.5rem;
+    }
+    .firstnameHide {
+      text-shadow: 0px 0px 0 var.$color;
+      transition-delay: 0.1s;
+      width: 1.1rem;
+    }
+    .firstnameShow {
+      width: 5.5rem;
+    }
+    &.is-opened {
+      transition-duration: var.$duration-animation-button-header;
+      transform: translateX(- calc(var.$sizes-cube * 3.5));
+    }  
+    &.is-closed {
+      transition-duration: var.$duration-animation-button-header;
+      transform: translateX(0);
+    }
+    @media screen and (min-width: 22rem) {
+      font-size: 1.8rem;
+      .lastnameHide {
+        width: 0.96rem;
+      }
+      .lastnameShow {
+        transition-delay: 0.3s;
+        width: 10rem;
+      }
+      .firstnameHide {
+        width: 1.2rem;
+      }
+    }
     @media screen and (min-width: 39rem) {
-        padding: 1rem 0 0 3rem;
+      font-size: 2.2rem;
+      -webkit-text-stroke: 1px var.$color;
+      text-stroke: 1px var.$color;
+      .lastnameHide {
+        width: 1.15rem;
+      }
+      .lastnameShow {
+        width: 11.5rem;
+      }
+      .firstnameHide {
+        transition-delay: 0.4s;
+        width: 1.5rem;
+      }
+      .firstnameShow {
+        width: 6.5rem;
+      }
+    }    
+    @media screen and (min-width: 50rem) {
+      font-size: 3rem;
+      width: 28rem;
+      .lastnameShow {
+        width: 20rem;
+      }
+      .firstnameShow {
+        width: 11rem;
+      }
     }
-    &__title {
-        position: relative;
-        display: flex;
-        font-family: 'Spongeboy';
-        -webkit-text-stroke: 0.5px var.$color;
-        text-stroke: 0.5px var.$color;
-        color: var.$background-color;
-        font-size: 1.6rem;
-        padding: 1rem 0 0.5rem 2rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        &--lastname,
-        &--firstname {
-            text-shadow: 1px 1px 0 var.$color;
-            padding-top: 0.5rem;
-            display: inline-block;
-            flex-wrap: nowrap;
-            overflow: hidden;
-        }
-        &--lastname {
-            transition: width 0.2s;
-            width: 9.5rem;
-        }
-        &--firstname {
-            border-radius: 0 0 1rem 0;
-            transition: width 0.2s;
-            width: 5.5rem;
-            margin-right: 0.5rem;
-        }
-        .lastnameHide {
-            text-shadow: 0px 0px 0 var.$color;
-            width: 0.84rem;
-        }
-        .lastnameShow {
-            width: 9.5rem;
-        }
-        .firstnameHide {
-            text-shadow: 0px 0px 0 var.$color;
-            transition-delay: 0.1s;
-            width: 1.1rem;
-        }
-        .firstnameShow {
-            width: 5.5rem;
-        }
-        &.is-opened {
-            transition-duration: var.$duration-animation-button-header;
-            transform: translateX(- calc(var.$sizes-cube * 3.5));
-        }  
-        &.is-closed {
-            transition-duration: var.$duration-animation-button-header;
-            transform: translateX(0);
-        }
-        @media screen and (min-width: 22rem) {
-            font-size: 1.8rem;
-            .lastnameHide {
-                width: 0.96rem;
-            }
-            .lastnameShow {
-                transition-delay: 0.3s;
-                width: 10rem;
-            }
-            .firstnameHide {
-                width: 1.2rem;
-            }
-        }
-        @media screen and (min-width: 39rem) {
-            font-size: 2.2rem;
-            -webkit-text-stroke: 1px var.$color;
-            text-stroke: 1px var.$color;
-            .lastnameHide {
-                width: 1.15rem;
-            }
-            .lastnameShow {
-                width: 11.5rem;
-            }
-            .firstnameHide {
-                transition-delay: 0.4s;
-                width: 1.5rem;
-            }
-            .firstnameShow {
-                width: 6.5rem;
-            }
-        }    
-        @media screen and (min-width: 50rem) {
-            font-size: 3rem;
-            width: 28rem;
-            .lastnameShow {
-                width: 20rem;
-            }
-            .firstnameShow {
-                width: 11rem;
-            }
-        }
-    }
+  }
 }
