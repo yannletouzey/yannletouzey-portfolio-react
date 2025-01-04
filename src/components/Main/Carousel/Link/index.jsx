@@ -46,15 +46,32 @@ const CarouselDescLink = ({ dataCarouselElement }) => {
   useEffect(() => {
   }, [link])
   return (
-    <div className="container__carousel--desc--link">
+    <div 
+      className="container__carousel--desc--link"
+    >
       {inline ? 
-        <div className="container__carousel--desc--link--inline" ref={linkRef} onMouseEnter={() => setLink(true)} onMouseLeave={() => setLink(false)}>
-          <a href={dataCarouselElement.link} target="_blank" rel="noopener noreferrer">
-            <div className="containerLink s1">
+        <div 
+          className="container__carousel--desc--link--inline" 
+          ref={linkRef} 
+          onMouseEnter={() => setLink(true)} 
+          onMouseLeave={() => setLink(false)}
+        >
+          <a 
+            href={dataCarouselElement.link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <div 
+              className="containerLink s1"
+            >
               {dataCarouselElement.slug}
             </div>
           </a> 
-          <a href={dataCarouselElement.link} target="_blank" rel="noopener noreferrer">
+          <a 
+            href={dataCarouselElement.link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             <div className="containerLink s2">
               {dataCarouselElement.slug}
             </div>
@@ -62,8 +79,18 @@ const CarouselDescLink = ({ dataCarouselElement }) => {
         </div>
         : 
         <>
-          <p className="container__carousel--msgNotOnline" ref={tooltip} >"{dataCarouselElement.title}" n'est pas encore en ligne</p>
-          <p onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>{dataCarouselElement.title}</p>
+          <p 
+            className="container__carousel--msgNotOnline" 
+            ref={tooltip}
+          >
+            "{dataCarouselElement.title}" n'est pas encore en ligne
+          </p>
+          <p 
+            onMouseEnter={() => setHover(true)} 
+            onMouseLeave={() => setHover(false)}
+          >
+            {dataCarouselElement.title}
+          </p>
         </>}
     </div>
   )

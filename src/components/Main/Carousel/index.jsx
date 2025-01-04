@@ -5,7 +5,7 @@ import './index.scss';
 
 const Carousel = ({ currentValue, containerRef, degValue, degreesValue }) => {
 
-  const { data, dataCarousel, setCurrentValue } = useStore();
+  const { dataCarousel, setCurrentValue } = useStore();
   
   const faceRef = dataCarousel.map(() => useRef());
   const imgRef = useRef();
@@ -39,7 +39,6 @@ const Carousel = ({ currentValue, containerRef, degValue, degreesValue }) => {
         })
       }
     })
-    
   }, [degreesValue])
   
   const handleMouseEnter = (e) => {

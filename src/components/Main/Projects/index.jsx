@@ -7,8 +7,7 @@ export default function Projects({ setTitleCurrent }) {
     const res = await fetch('https://apidata-one.vercel.app/api/data');
     const data = await res.json();
     data.forEach((project) => {
-      
-      if (project.typeProject !== 'serious') {        
+      if (!project.seriousProject && project.link !== '#') { 
         setData((data) => [...data, project]);
       }
     })
@@ -20,12 +19,29 @@ export default function Projects({ setTitleCurrent }) {
   }, []);
 
   return (
-    <section id="container" className="container">
-      <ul className="container__projects" style={{ listStyle: 'none', width: '100%'}}>
+    <section 
+      id="container" 
+      className="container"
+    >
+      <ul 
+        className="container__projects" 
+        style={{ 
+          listStyle: 'none', 
+          width: '100%'
+        }}
+      >
         {data.map((dataElement, index) => {
           return (
-            <li className='container__project' key={index}>
-              <a href={dataElement.link} target="_blank" rel="noopener noreferrer">{dataElement.link}</a>
+            <li 
+              className='container__project' 
+              key={index}
+            >
+              <a 
+                href={dataElement.link} 
+                target="_blank" 
+                rel="noopener noreferrer">
+                {dataElement.title}
+              </a>
             </li>
           )
         })}

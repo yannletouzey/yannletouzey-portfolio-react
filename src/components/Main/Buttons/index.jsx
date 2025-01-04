@@ -2,26 +2,36 @@ import './index.scss';
 import { useStore } from '../../../../store';
 import { useEffect } from 'react';
 import dataCarousel from '../../../assets/data/dataCarousel';
+import { useLocation } from 'react-router-dom';
 
 const Buttons = ({prevRef, nextRef, handleClick}) => {
+  const location = useLocation().pathname;
   const { currentValue } = useStore();
   useEffect(() => {
-    if (currentValue <= 1) {
-      prevRef.current.style.opacity = 0;
-      prevRef.current.style.cursor = 'default';
-      prevRef.current.style.scale = '0';
-    } else {
-      prevRef.current.style.opacity = 1;
-      prevRef.current.style.cursor = 'pointer';
-      prevRef.current.style.scale = '1';
-    }
-    if (currentValue === dataCarousel.length) {
-      nextRef.current.style.opacity = 0;
-      nextRef.current.style.cursor = 'default';
-    } else {
-      nextRef.current.style.opacity = 1;
-      nextRef.current.style.cursor = 'pointer';
-    }    
+    if (location === "/") {
+      if (prevRef.current && nextRef.current) {
+        if (currentValue <= 1) {
+          prevRef.current.style.opacity = 0;
+          prevRef.current.style.cursor = 'default';
+          prevRef.current.style.scale = '0';
+          prevRef.current.style.transition = `opacity 0, scale 0`;
+        } else {
+          prevRef.current.style.opacity = 1;
+          prevRef.current.style.cursor = 'pointer';
+          prevRef.current.style.scale = '1';
+          prevRef.current.style.transition = `opacity 0.5s ease-in-out, scale 0.5s ease-in-out`;
+        }
+        if (currentValue === dataCarousel.length) {
+          nextRef.current.style.opacity = 0;
+          nextRef.current.style.cursor = 'default';
+        } else {
+          nextRef.current.style.opacity = 1;
+          nextRef.current.style.cursor = 'pointer';
+          nextRef.current.style.transition = `opacity 0.5s ease-in-out, scale 0.5s ease-in-out`;
+        } 
+        
+      }
+    }   
   }, [currentValue]);
   return (
     <div className="button">

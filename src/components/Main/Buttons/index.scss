@@ -26,7 +26,7 @@
     }
   }
   &__btn {
-    transition: opacity 0.5s ease-in-out, scale 0.5s ease-in-out;
+    // transition: opacity 0.5s ease-in-out, scale 0.5s ease-in-out;
     width: var.$size-btn;
     height: var.$size-btn;
     background: transparent;
@@ -45,14 +45,14 @@
     @media screen and (min-width: 39rem) {
       &:hover #square-prev path, &:hover #square-next path {
         stroke-dashoffset: var.$stroke-square;
-        transition-duration: 0.5s;
+        transition: stroke-dashoffset 0.4s ease-in-out;
       }
       &:hover #arrow-prev path, &:hover #arrow-next path {
-        transition-duration: 0.5s;
         stroke-dashoffset: 0;
-        transition-delay: 0.2s;
         --pos-x: 10%;
         transform: translateX(var(--pos-x));
+        transition: stroke-dashoffset 0.5s ease-in-out;
+        transition-delay: 0.2s;
       }
     }
   }

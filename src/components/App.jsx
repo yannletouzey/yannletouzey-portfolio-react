@@ -71,12 +71,52 @@ const App = () => {
     <div onMouseMove={handleMouseMove} className="root__child" ref={rootChildRef}>
       <ScreenStart />
       <Header />
-      <Routes>
-        <Route path="/" element={<Main setTitleCurrent={setTitleCurrent} degValue={degValue} currentValue={currentValue} setCurrentValue={setCurrentValue} screenNotCompatible={screenNotCompatible} degreesValue={degreesValue} setDegreesValue={setDegreesValue} mousePos={mousePos} navigatorIsCompatible={navigatorIsCompatible} />} />
-        <Route path='/:project' element={<DetailsPage setTitleCurrent={setTitleCurrent} descSmall={dataCarousel} />} />
-        <Route path="/about" element={<About setTitleCurrent={setTitleCurrent} />} />
-        <Route path="/projects" element={<Projects setTitleCurrent={setTitleCurrent} dataCarousel={dataCarousel} />} />
-      </Routes>
+      <main className="main">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Main
+                setTitleCurrent={setTitleCurrent}
+                degValue={degValue}
+                currentValue={currentValue}
+                setCurrentValue={setCurrentValue}
+                screenNotCompatible={screenNotCompatible}
+                degreesValue={degreesValue}
+                setDegreesValue={setDegreesValue}
+                mousePos={mousePos}
+                navigatorIsCompatible={navigatorIsCompatible}
+              />
+            }
+          />
+          <Route
+            path='/:project'
+            element={
+              <DetailsPage
+                setTitleCurrent={setTitleCurrent}
+                descSmall={dataCarousel}
+              />
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <About
+                setTitleCurrent={setTitleCurrent}
+              />
+            }
+          />
+          <Route
+            path="/projects"
+            element={
+              <Projects
+                setTitleCurrent={setTitleCurrent}
+                dataCarousel={dataCarousel}
+              />
+            }
+          />
+        </Routes>
+      </main>
       <Footer />  
     </div>
   )

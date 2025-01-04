@@ -23,11 +23,33 @@ export default function MainSmallScreen({ containerRef, degValue, degreesValue, 
 
   return (
     <>
-      <section id="container" className="container">
-        <h4 ref={backgroundTitleRef} className="main__title">{backgroundTitle}</h4>
-        <p ref={backgroundTitleShadowRef} className="main__title--shadow">{backgroundTitle}</p>
-        <Carousel containerRef={containerRef} degValue={degValue} degreesValue={degreesValue} currentValue={currentValue} />
-        <Buttons nextRef={nextRef} prevRef={prevRef} handleClick={handleClick}/>
+      <section 
+        id="container" 
+        className="container"
+      >
+        <h4 
+          ref={backgroundTitleRef} 
+          className="main__title"
+        >
+          {backgroundTitle}
+        </h4>
+        <p 
+          ref={backgroundTitleShadowRef} 
+          className="main__title--shadow"
+        >
+          {backgroundTitle}
+        </p>
+        <Carousel 
+          containerRef={containerRef} 
+          degValue={degValue} 
+          degreesValue={degreesValue} 
+          currentValue={currentValue} 
+        />
+        <Buttons 
+          nextRef={nextRef} 
+          prevRef={prevRef} 
+          handleClick={handleClick}
+        />
       </section>
     </>
   )
