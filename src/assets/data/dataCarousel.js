@@ -158,7 +158,7 @@ const dataCarousel = [
     alt: "Image de la page d'accueil de world coordinate position",
     title: "World Coordinate Position",
     slug: "world-coordinate",
-    link: "https://world-coordinate-positiion-threejs.vercel.app/",
+    link: "https://world-coordinate-position-threejs.vercel.app/",
     page: "/world-coordinate-position",
     techno: {
       css: new URL('../../assets/icons/css.svg', import.meta.url),
