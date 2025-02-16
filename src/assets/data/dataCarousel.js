@@ -151,6 +151,26 @@ const dataCarousel = [
     descSmall: "",
     descFull: "Pas encore de description",
     seriousProject: true
+  },
+  {
+    id: 9,
+    imgUrl: new URL("../../assets/img/screenshot-website/world-coordinate-position.jpeg", import.meta.url),
+    alt: "Image de la page d'accueil de world coordinate position",
+    title: "World Coordinate Position",
+    slug: "world-coordinate",
+    link: "https://world-coordinate-positiion-threejs.vercel.app/",
+    page: "/world-coordinate-position",
+    techno: {
+      css: new URL('../../assets/icons/css.svg', import.meta.url),
+      js: new URL('../../assets/icons/js.svg', import.meta.url),
+      three: new URL("../../assets/icons/three.png", import.meta.url)
+    },
+    stack: "front-end",
+    category: "3d",
+    inline: true,
+    descSmall: "",
+    descFull: "Pas encore de description",
+    seriousProject: true
   }
 ]
 export default dataCarousel;
