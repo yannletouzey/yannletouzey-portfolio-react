@@ -154,7 +154,7 @@ const dataCarousel = [
   },
   {
     id: 9,
-    imgUrl: new URL("../../assets/img/screenshot-website/world-coordinate-position.jpeg", import.meta.url),
+    imgUrl: new URL("../../assets/img/screenshot-website/world-coordinate-position-threejs.jpeg", import.meta.url),
     alt: "Image de la page d'accueil de world coordinate position",
     title: "World Coordinate Position",
     slug: "world-coordinate",
