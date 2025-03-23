@@ -117,20 +117,22 @@ const dataCarousel = [
   },
   {
     id: 7,
-    imgUrl: new URL("../../assets/img/screenshot-website/cardiac-cohesion.png", import.meta.url),
-    alt: "Image de la page d'accueil de cardiac-cohesion",
-    title: "Cardiac Cohesion",
-    slug: "cardiac-cohesion",
-    link: "https://cardiac-cohesion.vercel.app/",
-    page: "/cardiac-cohesion",
+    imgUrl: new URL("../../assets/img/screenshot-website/r3f-character-animations.jpeg", import.meta.url),
+    alt: "Image de la page d'accueil de r3f-character-animations",
+    title: "R3F Character Animations",
+    slug: "r3f-character-animations",
+    link: "https://yannletouzey-r3f-character-animation.vercel.app/",
+    page: "/r3f-character-animations",
     techno: {
       css: new URL('../../assets/icons/css.svg', import.meta.url),
-      js: new URL('../../assets/icons/js.svg', import.meta.url)
+      js: new URL('../../assets/icons/js.svg', import.meta.url),
+      three: new URL("../../assets/icons/three.png", import.meta.url)
     },
     stack: "front-end",
-    category: "web-app",
+    category: "3d",
     inline: true,
-    desc: "Petit side project réalisé pendant la formation Oclock pour mettre en pratique les notions de JavaScript que je venais d'apprendre.",
+    descSmall: "",
+    descFull: "Pas encore de description",
     seriousProject: true
   },
   {
