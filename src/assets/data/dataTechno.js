@@ -64,6 +64,12 @@ const technoImg = [
     slug: 'sass', 
     color: '#CB6699',
     img: new URL("../../assets/icons/sass.svg", import.meta.url)
+  }, 
+  {
+    name: 'blender', 
+    slug: 'blender', 
+    color: '#0F5C81',
+    img: new URL("../../assets/icons/blender.png", import.meta.url)
   }
 ];
 export default technoImg;

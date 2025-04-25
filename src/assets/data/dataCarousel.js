@@ -107,7 +107,8 @@ const dataCarousel = [
     page: "/jack's-hand",
     techno: {
       css: new URL('../../assets/icons/css.svg', import.meta.url),
-      three: new URL("../../assets/icons/three.png", import.meta.url)
+      three: new URL("../../assets/icons/three.png", import.meta.url),
+      blender: new URL("../../assets/icons/blender.png", import.meta.url)
     },
     stack: "front-end",
     category: "3d",
@@ -126,7 +127,8 @@ const dataCarousel = [
     techno: {
       css: new URL('../../assets/icons/css.svg', import.meta.url),
       js: new URL('../../assets/icons/js.svg', import.meta.url),
-      three: new URL("../../assets/icons/three.png", import.meta.url)
+      three: new URL("../../assets/icons/three.png", import.meta.url),
+      blender: new URL("../../assets/icons/blender.png", import.meta.url)
     },
     stack: "front-end",
     category: "3d",
